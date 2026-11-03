@@ -1,0 +1,22 @@
+# Elessar
+
+> Open-source Python library for exploratory data analysis and statistical profiling, distributed under the MIT licence. Requires Python 3.10 or later.
+
+Elessar produces documented statistical assessments and HTML reports. Its scope includes data quality, distributions, associations, multivariate analysis and exploratory feature selection. Statistical findings depend on data and assumptions; diagnostics do not guarantee predictive performance or detect every instance of data leakage.
+
+## Documentation
+- [Complete guide](https://thibautdqb.github.io/elessar-site/guide.html): Features, methodology, installation, FAQ and roadmap. Readable without JavaScript.
+- [Complete guide as Markdown](https://thibautdqb.github.io/elessar-site/content-english.md): Plain-text version of the English guide.
+- [Full text reference](https://thibautdqb.github.io/elessar-site/llms-full.txt): Complete guide in one text file.
+- [Presentation](https://thibautdqb.github.io/elessar-site/): Interactive visual introduction.
+
+## Authoritative project sources
+- [Source and technical documentation](https://github.com/Thibautdqb/elessar)
+- [Package and published versions](https://pypi.org/project/elessar/)
+- [Release notes](https://github.com/Thibautdqb/elessar/releases)
+
+## Usage
+Install with `pip install elessar`. Example: `import elessar; report = elessar.see("data.csv")`.
+
+## Version accuracy
+The guide describes version 1.2 as in preparation. Verify current availability, API and version-specific features against PyPI and official release notes. Roadmap items are not released features. The website is a presentation of the Python library; it does not run analyses on uploaded data.
