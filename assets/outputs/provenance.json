@@ -12,6 +12,11 @@
       "file": "feature_selection.png",
       "source_path": "docs/feature_selection.png",
       "git_blob_sha": "1494737f6f144091f4e82f071d1189d4eeca24b9"
+    },
+    {
+      "file": "decomposition.png",
+      "source_path": "docs/decomposition.png",
+      "git_blob_sha": "ea9229ef1ca68560861f0296f754a97972032556"
     }
   ],
   "reports": [
@@ -32,11 +37,6 @@
           "file": "uci-wine/target-ranking.png",
           "report_page": 4,
           "report_figure": "21_cultivar_target_ranking.png"
-        },
-        {
-          "file": "uci-wine/flavanoids-by-cultivar.png",
-          "report_page": 5,
-          "report_figure": "22_cultivar__flavanoids_target.png"
         },
         {
           "file": "uci-wine/feature-selection.png",
@@ -62,6 +62,21 @@
           "file": "uci-wine/factor-analysis.png",
           "report_page": 20,
           "report_figure": "32_dataset_factors.png"
+        },
+        {
+          "file": "uci-wine/joint-plot.png",
+          "report_page": 28,
+          "report_figure": "18_total_phenols__flavanoids_scatter.png"
+        },
+        {
+          "file": "uci-wine/multivariate-outliers.png",
+          "report_page": 18,
+          "report_figure": "30_dataset_multivariate_outliers.png"
+        },
+        {
+          "file": "uci-wine/pca.png",
+          "report_page": 20,
+          "report_figure": "31_dataset_pca.png"
         }
       ],
       "extraction": "Embedded images extracted from the PDF without modification (pdfimages -png)."
