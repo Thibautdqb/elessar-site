@@ -9,16 +9,6 @@
       "git_blob_sha": "e768ca391c375ba44d8c7bf17b7fc8e6b5779bba"
     },
     {
-      "file": "association_heatmap.png",
-      "source_path": "docs/association_heatmap.png",
-      "git_blob_sha": "e63654b6c163436cc249b8c0098829b859f7ef4d"
-    },
-    {
-      "file": "factor_analysis.png",
-      "source_path": "docs/factor_analysis.png",
-      "git_blob_sha": "1b72d14df3bf846824de3b0564b19b178dd28089"
-    },
-    {
       "file": "feature_selection.png",
       "source_path": "docs/feature_selection.png",
       "git_blob_sha": "1494737f6f144091f4e82f071d1189d4eeca24b9"
@@ -31,7 +21,50 @@
       "generated_by": "elessar 1.1.0",
       "generated_at": "2026-11-02",
       "pages": 55,
-      "cover": "../reports/elessar-uci-wine-report-cover.webp"
+      "cover": "../reports/elessar-uci-wine-report-cover.webp",
+      "figures": [
+        {
+          "file": "uci-wine/overview.png",
+          "report_page": 2,
+          "report_figure": "00_dataset_overview.png"
+        },
+        {
+          "file": "uci-wine/target-ranking.png",
+          "report_page": 4,
+          "report_figure": "21_cultivar_target_ranking.png"
+        },
+        {
+          "file": "uci-wine/flavanoids-by-cultivar.png",
+          "report_page": 5,
+          "report_figure": "22_cultivar__flavanoids_target.png"
+        },
+        {
+          "file": "uci-wine/feature-selection.png",
+          "report_page": 8,
+          "report_figure": "28_cultivar_selection.png"
+        },
+        {
+          "file": "uci-wine/flavanoids-distribution.png",
+          "report_page": 12,
+          "report_figure": "10_flavanoids_dist.png"
+        },
+        {
+          "file": "uci-wine/associations.png",
+          "report_page": 25,
+          "report_figure": "03_dataset_association.png"
+        },
+        {
+          "file": "uci-wine/outliers.png",
+          "report_page": 16,
+          "report_figure": "29_dataset_outliers.png"
+        },
+        {
+          "file": "uci-wine/factor-analysis.png",
+          "report_page": 20,
+          "report_figure": "32_dataset_factors.png"
+        }
+      ],
+      "extraction": "Embedded images extracted from the PDF without modification (pdfimages -png)."
     }
   ]
 }
