@@ -5,6 +5,19 @@
  const reduced=matchMedia('(prefers-reduced-motion: reduce)');
  const entries=[...root.querySelectorAll('[data-intro-slide]')].map(slide=>{
   const code=slide.querySelector('pre code'),text=code.textContent;
+  const copy=slide.querySelector('[data-copy-example]');
+  copy?.addEventListener('click',async()=>{
+   try{
+    await navigator.clipboard.writeText(text);
+    copy.textContent='Copied';
+    root.querySelector('[data-live]').textContent='Example copied.';
+    setTimeout(()=>copy.textContent='Copy',1800);
+   }catch{
+    const selection=getSelection(),range=document.createRange();
+    range.selectNodeContents(code);selection.removeAllRanges();selection.addRange(range);
+    root.querySelector('[data-live]').textContent='Select and copy the example with your keyboard.';
+   }
+  });
   const reserve=document.createElement('span');reserve.textContent=text;reserve.style.opacity='0';
   const ink=document.createElement('span');ink.setAttribute('aria-hidden','true');
   Object.assign(ink.style,{position:'absolute',inset:'0',whiteSpace:'pre'});
