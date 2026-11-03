@@ -1,7 +1,7 @@
 {
   "repository": "https://github.com/Thibautdqb/elessar",
   "commit": "2262600bc335e535297bfc64b05b646e6172590f",
-  "role": "Published Elessar demonstration outputs; not the user's unattached report.",
+  "role": "Published Elessar demonstration outputs.",
   "figures": [
     {
       "file": "numeric_distribution.png",
@@ -22,6 +22,16 @@
       "file": "feature_selection.png",
       "source_path": "docs/feature_selection.png",
       "git_blob_sha": "1494737f6f144091f4e82f071d1189d4eeca24b9"
+    }
+  ],
+  "reports": [
+    {
+      "file": "../reports/elessar-uci-wine-report.pdf",
+      "dataset": "UCI Wine Chemistry (178 rows x 14 columns, target cultivar)",
+      "generated_by": "elessar 1.1.0",
+      "generated_at": "2026-11-02",
+      "pages": 55,
+      "cover": "../reports/elessar-uci-wine-report-cover.webp"
     }
   ]
 }
