@@ -28,6 +28,7 @@
  function full(entry){entry.ink.textContent=entry.text;entry.ink.classList.remove('cs-type-cursor');}
  function update(){
   cancelAnimationFrame(frame);frame=0;last=0;
+  if(document.documentElement.classList.contains('cs-loading'))return;
   const allowed=!reduced.matches&&root.dataset.motion!=='off';
   if(!allowed){entries.forEach(full);return;}
   entries.forEach(e=>{e.ink.textContent=e.finished?e.text:e.text.slice(0,e.count)});
@@ -45,5 +46,6 @@
  }
  new MutationObserver(update).observe(root,{subtree:true,attributes:true,attributeFilter:['aria-hidden','data-motion','data-reader-open']});
  root.addEventListener('constellation:progress',()=>{if(Number(root.dataset.story)>.65){cancelAnimationFrame(frame);frame=0;}});
+ new MutationObserver(update).observe(document.documentElement,{attributes:true,attributeFilter:['class']});
  document.addEventListener('visibilitychange',update);reduced.addEventListener('change',update);update();
 })();

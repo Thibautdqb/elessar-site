@@ -16,6 +16,7 @@ Le serveur local permet de charger le GLB. Un double-clic sur `index.html` peut 
 
 ## Déroulement
 
+0. Un écran de chargement léger (logo, cristal, barre et pourcentage du téléchargement du modèle 3D) masque la page jusqu'à la première image WebGL, puis s'efface en fondu. Si WebGL est indisponible, il attend les images de secours. Au bout de 20 secondes, la page s'affiche quoi qu'il arrive. Sans JavaScript, l'écran n'apparaît pas.
 1. La pierre apparaît entière à droite. Trois courts textes anglais défilent de droite à gauche au fil du scroll. La pierre reste à droite et effectue une rotation sur son axe vertical. Une rotation lente continue également lorsque le défilement s'arrête dans cette partie de l'introduction.
 2. La rotation se termine face à l'écran. La pierre entière se déplace ensuite au centre.
 3. Une fois centrée, elle s'ouvre en cinq pièces seulement : les quatre coins et le cristal central intact. Les coins partent l'un après l'autre sur une trajectoire en arc, dépassent leur place puis s'y posent, en basculant chacun sur trois axes ; le cristal central fait un tour complet sur lui-même. Au repos, chaque pièce flotte avec son propre rythme. Les cinq catégories apparaissent ensemble.
