@@ -1,19 +1,42 @@
-# elessar-site
+# Elessar — Introduction animée
 
-Presentation website for [Elessar](https://github.com/Thibautdqb/elessar), the Python library for exploratory data analysis and statistical profiling.
+Version locale avec une nouvelle entrée en scène. Les textes anglais complets, les cinq catégories, les graphiques et le footer de la version précédente sont conservés. Aucun commit, push ou déploiement effectué.
 
-The opening sequence keeps the assembled jewel on the right while the introduction scrolls. It then moves to the centre and opens into five perspectives. The pieces reunite in the footer.
+## Ouvrir
 
-The site includes the complete English guide, real report figures, a five-piece GLB and an image fallback. Fonts and visual dependencies are served locally.
+Extraire le ZIP, ouvrir un terminal dans le dossier qui contient `index.html`, puis lancer :
 
-## Local preview
+```sh
+bash launch.sh
+```
 
-Run `bash launch.sh`, or `python3 -m http.server 8000 --bind 127.0.0.1` from this directory, then open the printed address. Use an HTTP server to load the 3D model.
+Le lanceur utilise `python3`, choisit un port libre et ouvre le navigateur. Garder le terminal ouvert ; `Ctrl+C` arrête le serveur. Si nécessaire, ouvrir l'adresse imprimée dans le terminal.
 
-## GitHub Pages
+Le serveur local permet de charger le GLB. Un double-clic sur `index.html` peut bloquer les ressources 3D dans certains navigateurs.
 
-This repository is a ready-to-publish static site. Configure GitHub Pages to deploy from the `main` branch and the repository root. Keep `index.html`, `guide.html`, `.nojekyll` and `assets/` together. No Node build is required.
+## Déroulement
 
-## Content and notices
+1. La pierre apparaît entière à droite. Trois courts textes anglais défilent de droite à gauche au fil du scroll. La pierre reste à droite et effectue une rotation sur son axe vertical. Une rotation lente continue également lorsque le défilement s'arrête dans cette partie de l'introduction.
+2. La rotation se termine face à l'écran. La pierre entière se déplace ensuite au centre.
+3. Une fois centrée, elle s'ouvre en cinq pièces seulement : les quatre coins et le cristal central intact. Les cinq catégories apparaissent ensemble.
+4. Cliquer sur une pièce ou son libellé ouvre le lecteur. En continuant vers le bas, les pièces rejoignent le footer et reconstituent la pierre dans sa pose finale.
 
-The complete English text is available in `guide.html` and `content-english.md`. Chart provenance is recorded in `assets/outputs/provenance.json`. Third-party engine, decoder and font notices are included in `assets/licenses/`.
+Le premier tableau reste fixe pendant cette séquence ; la page poursuit ensuite son défilement vers les véritables sorties graphiques et le footer. Les liens « Explore Elessar » et « Five perspectives » permettent d'aller directement aux catégories. « Report outputs » mène aux graphiques.
+
+## Contrôles et accessibilité
+
+Le bouton de pause fige la rotation décorative. La préférence système de réduction des animations est respectée. La rotation s'arrête lorsque l'onglet est masqué ou qu'un texte est ouvert dans le lecteur.
+
+Le lecteur conserve les cinq catégories et les dix sections traduites, avec FAQ et roadmap. Il se ferme avec Échap. `guide.html` et `content-english.md` contiennent toujours l'intégralité du texte anglais. Le guide peut se lire sans JavaScript.
+
+Si WebGL est indisponible, les cinq images originales prennent le relais. Elles suivent le placement et la reconstitution ; une légère variation de perspective remplace la rotation 3D, sans prétendre montrer le dos du modèle.
+
+## Ressources et vérification
+
+Le modèle 3D est inchangé : 1 942 191 triangles répartis en cinq pièces, avec le cristal central entier, les attributs et les textures d'origine. Les coupes ne possèdent pas de nouvelles faces intérieures. Le fond et les quatre figures statistiques sont conservés à l'identique.
+
+Les vérifications de code couvrent l'ordre des transitions, la rotation de la pierre assemblée, le placement à droite, le recentrage, l'ouverture en cinq, la navigation et le retour au footer. L'aperçu navigateur de l'environnement de préparation est indisponible : le rendu GPU, le cadrage sur les appareils réels et la fréquence d'images restent à vérifier dans votre navigateur.
+
+## Hébergement
+
+Le ZIP est entièrement statique, sans build Node nécessaire. Conserver `index.html`, `guide.html`, `.nojekyll` et `assets/` ensemble. Les ressources sont incluses ; les liens vers GitHub et PyPI restent externes. La directive `noindex,nofollow` est conservée pour cette version de validation.

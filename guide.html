@@ -1,0 +1,210 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#05090b"><meta name="robots" content="noindex,nofollow"><title>elessar. — Complete guide</title><style>@font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:400;font-display:swap;src:url('assets/fonts/ibm-plex-sans-latin-400-normal.woff2') format('woff2');}
+@font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:500;font-display:swap;src:url('assets/fonts/ibm-plex-sans-latin-500-normal.woff2') format('woff2');}
+@font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:600;font-display:swap;src:url('assets/fonts/ibm-plex-sans-latin-600-normal.woff2') format('woff2');}
+@font-face{font-family:'Instrument Serif';font-style:normal;font-weight:400;font-display:swap;src:url('assets/fonts/instrument-serif-latin-400-normal.woff2') format('woff2');}
+@font-face{font-family:'Instrument Serif';font-style:italic;font-weight:400;font-display:swap;src:url('assets/fonts/instrument-serif-latin-400-italic.woff2') format('woff2');}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:95px;background:#08110f;color:#e8f1e8;font:14px/1.95 'IBM Plex Sans',sans-serif}body{margin:0}a{color:#a0ffda;text-underline-offset:5px}header{position:sticky;top:0;padding:16px 5vw;border-bottom:1px solid #a0ffda33;background:#08110ff5;z-index:1;display:flex;gap:25px;align-items:center}header>a{font-size:28px;letter-spacing:-1.5px;font-weight:600;text-decoration:none}nav{display:flex;gap:20px;flex-wrap:wrap;font-size:11px}main{max-width:850px;margin:50px auto;padding:0 25px}article{padding:30px 0 55px;border-bottom:1px solid #a0ffda33}h1{font:400 55px/1.1 'Instrument Serif',serif;color:#a0ffda}h2{font:400 35px/1.2 'Instrument Serif',serif;margin:40px 0 25px}h3{font-size:18px;margin:30px 0 12px}p{margin:0 0 18px}pre{background:#030907;padding:22px;border:1px solid #a0ffda33;overflow:auto;color:#a0ffda}code{font-family:Consolas,monospace}button.fx-copy-command{display:none}footer{padding-block:30px;font-size:11px}@media(max-width:700px){header{display:block}header nav{margin-top:10px;gap:5px 17px;font-size:10px}h1{font-size:43px}main{margin-top:25px}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}</style></head><body><header><a href="index.html">elessar.</a><nav aria-label="Five categories"><a href="#discover">Discover Elessar</a><a href="#features">Features</a><a href="#report">The HTML report</a><a href="#methodology">Scientific methodology</a><a href="#get-started">Get started</a></nav></header><main><article id="discover"><h1>Discover Elessar</h1><h2 id="explore-your-data-understand-its-structure-make-better-decisions" tabindex="-1">Explore your data. Understand its structure. Make better decisions.</h2>
+<p>Exploratory analysis should go beyond a handful of descriptive statistics and automatically generated charts.</p>
+<p>Elessar is a Python library for exploratory data analysis and statistical profiling. It turns tabular data into a structured, documented and actionable assessment.</p>
+<p>In a single call, Elessar examines variable types, data quality, distributions, statistical associations, unusual observations and multivariate structure. When a target is specified, it also examines potentially predictive variables.</p>
+<p>The result is a comprehensive HTML report, visualisations and data preparation recommendations accompanied by Python code.</p>
+<p>Explore in depth, without multiplying scripts.</p>
+<p><a href="guide.html#features">Discover Elessar</a>. <a href="https://github.com/Thibautdqb/elessar" target="_blank" rel="noopener noreferrer">View the project on GitHub</a>. <a href="guide.html#get-started">Get started with Python</a>.</p>
+<h3 id="a-rigorous-approach-to-statistics" tabindex="-1">A rigorous approach to statistics</h3>
+<p>Elessar aims to make numbers interpretable, as well as produce them.</p>
+<p>Methods are selected according to the nature of the data. Statistical assumptions, the limitations of tests and situations in which a conclusion remains uncertain are explicitly documented.</p>
+<p>A strong association does not automatically imply causation. A highly predictive variable is not necessarily data leakage. And the highest-ranked distribution is not necessarily the true distribution.</p>
+<p>Elessar keeps these distinctions at the heart of its analysis.</p>
+<h3 id="from-a-first-inspection-to-a-deeper-understanding" tabindex="-1">From a first inspection to a deeper understanding</h3>
+<ul><li>Detect data quality issues.</li><li>Explore relationships between variables.</li><li>Examine distributions and unusual observations.</li><li>Identify redundant dimensions.</li><li>Analyse your time series.</li><li>Prepare variables for the next steps.</li></ul>
+<p>All within a familiar Python environment, with a report designed to be read and shared.</p>
+<p>Your data deserves more than a summary.</p>
+<h2 id="use-cases" tabindex="-1">Use cases</h2>
+<h3 id="from-a-quick-inspection-to-an-in-depth-analysis" tabindex="-1">From a quick inspection to an in-depth analysis</h3>
+<p>Elessar supports different stages of working with data.</p>
+<h3 id="data-science-and-machine-learning" tabindex="-1">Data science and machine learning</h3>
+<p>Before training a model, you need to understand the available variables, their quality, their relationships and the risks of contamination.</p>
+<p>Elessar supports this investigation by identifying promising variables, redundancies, missing values and possible transformations.</p>
+<p>It helps prepare a suitable modelling protocol; it does not replace one.</p>
+<h3 id="research-and-statistical-analysis" tabindex="-1">Research and statistical analysis</h3>
+<p>Researchers and analysts can examine distributions, associations, multivariate structure and time series within the same tool.</p>
+<p>Results retain their methodological assumptions, making them easier to check and discuss.</p>
+<h3 id="financial-data-analysis" tabindex="-1">Financial data analysis</h3>
+<p>Financial data often exhibits skewed distributions, extreme observations, temporal dependencies and unstable relationships.</p>
+<p>Elessar can support an initial exploration of these characteristics, help identify redundancies and examine the statistical structure of time series.</p>
+<p>These results are neither validated trading signals nor guarantees of predictive performance.</p>
+<h3 id="data-quality-and-preparation" tabindex="-1">Data quality and preparation</h3>
+<p>When a file comes from an external source, its types, conventions and formats are not always reliable.</p>
+<p>Elessar helps identify inconsistencies and establish a reasoned list of possible transformations before the data is used in production.</p>
+<h3 id="exploring-unfamiliar-datasets" tabindex="-1">Exploring unfamiliar datasets</h3>
+<p>For a new CSV, Parquet or Excel file, Elessar quickly provides a structured overview.</p>
+<p>You have a foundation for exploration that can be developed according to your project's needs, instead of starting from scratch.</p>
+<h2 id="about-elessar" tabindex="-1">About Elessar</h2>
+<p>Elessar grew from a simple idea: exploratory analysis deserves the same rigour as the models that follow it.</p>
+<p>In many projects, data exploration remains a sequence of separate commands, charts and tests.</p>
+<p>This approach often leaves important questions unanswered. Why was a variable interpreted as numeric? Why was this test selected? Are its assumptions appropriate? Is a high correlation credible? Could a transformation contaminate a future evaluation?</p>
+<p>Elessar brings these questions into a single analysis process.</p>
+<p>The project combines automation, statistics, visualisation and methodological transparency so users can spend more time interpreting their data.</p>
+<p>Its ambition is to examine varied datasets with depth and rigour, while keeping the limits of what the data can actually establish in view.</p>
+<p>Elessar is not intended to replace the judgement of a statistician or data scientist.</p>
+<p>It gives them better tools to explore, verify and understand.</p>
+<p>Elessar — See further into your data.</p></article><article id="features"><h1>Features</h1><h2 id="complete-statistical-exploration-in-one-tool" tabindex="-1">Complete statistical exploration in one tool</h2>
+<p>Elessar brings together families of analyses that are often spread across separate scripts, libraries and notebooks.</p>
+<h3 id="automatic-understanding-of-variables" tabindex="-1">Automatic understanding of variables</h3>
+<p>Technical data types do not always reveal the true nature of a variable.</p>
+<p>An integer may represent an amount, an identifier or a category code. A string may contain a date, an email address, an ordinal scale or a poorly formatted number.</p>
+<p>Elessar examines column contents and characteristics to suggest suitable semantic types, with explanations and confidence indicators.</p>
+<h3 id="data-quality" tabindex="-1">Data quality</h3>
+<p>Formatting errors, missing values, duplicates, inconsistencies and unexpected values can substantially change the conclusions of an analysis.</p>
+<p>Elessar identifies these issues, prioritises them and suggests checks or corrections.</p>
+<p>The recommendations remain explicit: an unusual value is not automatically an error.</p>
+<h3 id="descriptive-statistics-and-distributions" tabindex="-1">Descriptive statistics and distributions</h3>
+<p>Elessar produces measures suited to the variable types: central tendency, dispersion, quantiles, skewness, concentration, frequent values and other relevant characteristics.</p>
+<p>For eligible numeric variables, it compares distribution families using criteria such as AIC, examines discrepancies in fit and provides normality diagnostics.</p>
+<p>The aim is to understand the observed shape of the data, rather than impose a theoretical distribution.</p>
+<h3 id="associations-between-variables" tabindex="-1">Associations between variables</h3>
+<p>Elessar examines numeric, categorical and mixed relationships with appropriate measures, including Pearson, Spearman, Kendall, Cramér's V, the correlation ratio, mutual information and AUC, depending on the context.</p>
+<p>Where the assumptions allow, these measures are accompanied by statistical tests, multiple-comparison adjustments or confidence intervals.</p>
+<p>Approximate or unavailable inferential results are distinguished from descriptive results.</p>
+<h3 id="supervised-analysis-and-feature-selection" tabindex="-1">Supervised analysis and feature selection</h3>
+<p>When a target variable is specified, Elessar examines its associations with predictors and compares several selection methods.</p>
+<p>Decision trees, random forests, L1 and L2 regularisation and statistical filters contribute to a feature consensus.</p>
+<p>Shuffled reference variables, known as shadow features, help contextualise certain importance measures.</p>
+<p>Version 1.2 adds a final evaluation independent of the consensus-building process, separating feature selection from its assessment on held-out observations. This version is still in preparation; its features will become publicly available after the official release.</p>
+<h3 id="multivariate-analysis" tabindex="-1">Multivariate analysis</h3>
+<p>Elessar looks for redundancy between variables and examines whether dimensionality reduction may be useful.</p>
+<p>It provides principal component analysis and exploratory component extraction with varimax rotation, together with diagnostics such as KMO, Bartlett's test, parallel analysis and internal consistency.</p>
+<p>These results help explain shared structure. They do not automatically establish the existence of latent constructs.</p>
+<h3 id="unusual-observations" tabindex="-1">Unusual observations</h3>
+<p>An extreme value may be an anomaly, a rare but legitimate observation or a particularly interesting event.</p>
+<p>Elessar combines detection criteria and distinguishes statistical flagging from the decision to clean the data.</p>
+<p>The report helps examine the observations concerned, rather than remove them without justification.</p>
+<h3 id="time-series" tabindex="-1">Time series</h3>
+<p>For data with an identifiable temporal structure, Elessar examines trends, autocorrelation, seasonality and stationarity, among other characteristics.</p>
+<p>When the required conditions are met, inferential methods account for temporal dependence.</p>
+<p>The limitations of the approximations used are documented.</p>
+<h3 id="a-data-preparation-plan" tabindex="-1">A data preparation plan</h3>
+<p>At the end of an analysis, Elessar proposes a data preparation plan.</p>
+<p>Cleaning, transformations, encoding, grouping and other operations are accompanied by explanations and code examples.</p>
+<p>For predictive modelling, learned transformations must be fitted only on the training data to avoid contamination between datasets.</p></article><article id="report"><h1>The HTML report</h1><h2 id="your-data-brought-together-in-a-report" tabindex="-1">Your data, brought together in a report</h2>
+<p>Elessar returns more than Python objects.</p>
+<p>It produces a navigable HTML report that brings exploration results, visualisations, alerts and recommendations into a coherent interface.</p>
+<h3 id="an-immediate-overview" tabindex="-1">An immediate overview</h3>
+<p>The report starts with the essentials: dataset dimensions, variable types, the proportion of missing values, important alerts and principal findings.</p>
+<p>You can quickly identify areas that need further investigation.</p>
+<h3 id="structured-navigation" tabindex="-1">Structured navigation</h3>
+<p>Analyses are organised into sections: overview, target, feature selection, distributions, unusual observations, data quality, multivariate statistics, time series and preparation.</p>
+<p>Each variable also has its own detailed analysis.</p>
+<h3 id="charts-that-support-interpretation" tabindex="-1">Charts that support interpretation</h3>
+<p>Histograms, distribution fits, quantile–quantile plots, association matrices, PCA visualisations, time-series charts and outlier visualisations let you examine results from several perspectives.</p>
+<p>Visualisations are linked to the corresponding statistics to preserve the context needed for interpretation.</p>
+<h3 id="findings-you-can-examine" tabindex="-1">Findings you can examine</h3>
+<p>A statistical result should be understandable and placed in its methodological context.</p>
+<p>Elessar identifies the methods used and distinguishes descriptive measures from inferential conclusions.</p>
+<p>When a result depends on assumptions or an approximation, that distinction forms part of its interpretation.</p>
+<h3 id="recommendations-with-code" tabindex="-1">Recommendations with code</h3>
+<p>The report includes data preparation suggestions with Python examples.</p>
+<p>These examples provide a reproducible, reviewable starting point. They do not require automatic transformation.</p>
+<h3 id="a-portable-report" tabindex="-1">A portable report</h3>
+<p>The report can be viewed locally in a browser. Elessar can also generate a self-contained HTML version with its charts embedded.</p>
+<p>Results remain accessible through the Python API for further processing.</p>
+<p>An analysis you can read, examine and share.</p>
+<p><a href="index.html#outputs">Explore actual report outputs</a>.</p></article><article id="methodology"><h1>Scientific methodology</h1><h2 id="statistical-rigour-as-a-design-principle" tabindex="-1">Statistical rigour as a design principle</h2>
+<p>Automated analysis is useful only when its results can be understood.</p>
+<p>Elessar is developed around a principle: every statistical method has assumptions, a domain of application and limitations.</p>
+<p>The goal is to choose appropriate methods, rather than apply the same tests uniformly to every dataset.</p>
+<h3 id="a-measurement-is-not-a-conclusion" tabindex="-1">A measurement is not a conclusion</h3>
+<p>A correlation measures an association, not causation.</p>
+<p>A p-value depends on the test and its assumptions.</p>
+<p>A confidence interval can be interpreted only within an appropriate sampling framework.</p>
+<p>And a non-significant result does not establish the absence of a relationship.</p>
+<p>Elessar preserves these distinctions in its scientific documentation and in the presentation of results.</p>
+<h3 id="accounting-for-dependencies" tabindex="-1">Accounting for dependencies</h3>
+<p>Observations are not always independent.</p>
+<p>Time series, panel data and repeated measurements need particular attention: ignoring their structure can lead to overly optimistic conclusions.</p>
+<p>Elessar incorporates specific methods for certain temporal structures, while identifying approximations and the conditions still required for their validity.</p>
+<h3 id="limiting-spurious-conclusions" tabindex="-1">Limiting spurious conclusions</h3>
+<p>Testing many relationships increases the risk of false positives.</p>
+<p>Elessar applies multiplicity adjustments within the relevant test families and distinguishes adjusted results from raw measures.</p>
+<p>These adjustments are not presented as a universal guarantee when their assumptions have not been established.</p>
+<h3 id="preventing-data-leakage" tabindex="-1">Preventing data leakage</h3>
+<p>Excellent predictive performance is not always good news.</p>
+<p>It may reflect a legitimate signal, or information that would not have been available at prediction time.</p>
+<p>Elessar flags suspicious associations, supports explicit exclusion of variables whose provenance is known and applies a configurable quarantine policy for exact aliases of the target.</p>
+<p>A strong association alone is insufficient to establish leakage.</p>
+<p>In its selection procedure, v1.2 also reserves an independent final set to evaluate the consensus after the selected features have been fixed. This version remains in preparation.</p>
+<h3 id="testing-methods-as-well-as-execution" tabindex="-1">Testing methods, as well as execution</h3>
+<p>Elessar's scientific validation goes beyond checking that functions run.</p>
+<p>The project includes tests on synthetic datasets with known properties, comparisons with reference implementations and simulations examining false positives, statistical power and numerical stability, among other aspects.</p>
+<p>These validations characterise defined domains of application. They do not provide a guarantee for every possible distribution or data-generating process.</p>
+<p>A scientific library should make its evidence as visible as its limitations.</p>
+<p><a href="https://github.com/Thibautdqb/elessar" target="_blank" rel="noopener noreferrer">Read the scientific contract and validation results in the GitHub repository</a>.</p></article><article id="get-started"><h1>Get started</h1><h2 id="installation-and-first-steps" tabindex="-1">Installation and first steps</h2>
+<h3 id="start-exploring-your-data-with-python" tabindex="-1">Start exploring your data with Python</h3>
+<p>Elessar is an open-source Python library, available on PyPI and developed publicly on GitHub.</p>
+<p>Install the standard package with:</p>
+<pre><code class="language-sh">pip install elessar</code></pre>
+<button class="fx-copy-command" type="button" data-copy-install>Copy command</button>
+<p>Elessar requires Python 3.10 or later.</p>
+<p>Run your first analysis:</p>
+<pre><code class="language-python">import elessar
+
+report = elessar.see(&quot;data.csv&quot;)</code></pre>
+<p>To analyse a target variable:</p>
+<pre><code class="language-python">report = elessar.see(&quot;data.csv&quot;, target=&quot;target&quot;)</code></pre>
+<p>Elessar also works with pandas DataFrames and several other supported tabular representations.</p>
+<p>Once exploration is complete, results can be inspected in the terminal, through the Python API and in the generated HTML report.</p>
+<p>Analyses can be customised with StoneConfig, including control over methods and computation parameters.</p>
+<p>Version 1.2 is being finalised and validated. Features described for this version will become publicly available after its official release.</p>
+<p>For the API, parameters and detailed examples, see the technical documentation on GitHub.</p>
+<p><a href="https://pypi.org/project/elessar/" target="_blank" rel="noopener noreferrer">Install Elessar</a>. <a href="https://github.com/Thibautdqb/elessar#api" target="_blank" rel="noopener noreferrer">Read the documentation</a>. <a href="https://github.com/Thibautdqb/elessar" target="_blank" rel="noopener noreferrer">Explore the source code</a>.</p>
+<h2 id="open-source-and-development" tabindex="-1">Open source and development</h2>
+<h3 id="open-inspectable-and-evolving" tabindex="-1">Open, inspectable and evolving</h3>
+<p>Elessar is developed as an open-source Python project under the MIT licence.</p>
+<p>Its code, tests, validation workflows and methodological documents are publicly accessible.</p>
+<p>This transparency lets you examine the statistical choices behind the features, as well as the features themselves.</p>
+<h3 id="development-guided-by-tests" tabindex="-1">Development guided by tests</h3>
+<p>Each new version aims to improve methodological robustness, consistency of results and compatibility with the Python ecosystem.</p>
+<p>Version 1.2 strengthens the isolation of the final evaluation, statistical diagnostics for dependent data, the calibration of certain methods and the precision of report explanations.</p>
+<p>Larger changes to the inference engine will undergo dedicated development and validation.</p>
+<h3 id="contributing-to-the-project" tabindex="-1">Contributing to the project</h3>
+<p>User feedback, bug reports, proposed tests and code contributions are welcome.</p>
+<p>A statistical improvement should include a methodological justification and tests that characterise its behaviour.</p>
+<p>The GitHub repository is the reference point for following development and contributing to the project.</p>
+<p><a href="https://github.com/Thibautdqb/elessar" target="_blank" rel="noopener noreferrer">GitHub — Thibautdqb/elessar</a>.</p>
+<h2 id="frequently-asked-questions" tabindex="-1">Frequently asked questions</h2>
+<h3 id="is-elessar-free" tabindex="-1">Is Elessar free?</h3>
+<p>Yes. Elessar is an open-source project distributed under the MIT licence.</p>
+<h3 id="is-my-data-sent-to-a-remote-service" tabindex="-1">Is my data sent to a remote service?</h3>
+<p>Analysis runs in your Python environment. Elessar does not require a cloud service to produce statistics and local reports. How your data is processed depends on the environment and sources you use.</p>
+<h3 id="do-i-need-to-specify-a-target-variable" tabindex="-1">Do I need to specify a target variable?</h3>
+<p>No. Elessar can perform unsupervised exploration. When a target is supplied, it adds the appropriate analyses and selection methods.</p>
+<h3 id="does-elessar-replace-pandas-scipy-or-scikit-learn" tabindex="-1">Does Elessar replace pandas, SciPy or scikit-learn?</h3>
+<p>No. It builds on the scientific Python ecosystem to orchestrate analyses, provide consistent diagnostics and produce an integrated report.</p>
+<h3 id="can-elessar-automatically-detect-every-instance-of-data-leakage" tabindex="-1">Can Elessar automatically detect every instance of data leakage?</h3>
+<p>No. It can identify certain target aliases, flag suspicious associations and apply configured exclusions. Establishing whether a variable was actually available at prediction time may require business or temporal information that is absent from the dataset.</p>
+<h3 id="are-p-values-always-available" tabindex="-1">Are p-values always available?</h3>
+<p>No. Some situations do not permit reliable inference without additional assumptions. Elessar distinguishes descriptive results from conditional, approximate or unavailable tests.</p>
+<h3 id="is-the-highest-ranked-distribution-necessarily-the-true-distribution" tabindex="-1">Is the highest-ranked distribution necessarily the true distribution?</h3>
+<p>No. AIC rankings compare fitted candidate families. They do not establish that any candidate exactly represents the data-generating process.</p>
+<h3 id="does-elessar-clean-the-data-automatically" tabindex="-1">Does Elessar clean the data automatically?</h3>
+<p>Elessar provides diagnostics and data preparation recommendations with code. Corrections need to be reviewed in context, particularly for unusual observations or supervised transformations.</p>
+<h3 id="can-elessar-work-with-large-files" tabindex="-1">Can Elessar work with large files?</h3>
+<p>Elessar provides mechanisms for progressive reading and large-data processing for supported formats. Practical limits depend on the source, available resources and requested operations.</p>
+<h3 id="does-elessar-guarantee-good-machine-learning-models" tabindex="-1">Does Elessar guarantee good machine learning models?</h3>
+<p>No. Elessar helps you understand and prepare data and provides exploratory evaluations. A model's production performance also depends on the problem, validation protocol and changes in the data.</p>
+<h3 id="what-is-the-difference-between-v1-1-and-v1-2" tabindex="-1">What is the difference between v1.1 and v1.2?</h3>
+<p>Version 1.2 aims to strengthen the scientific consistency of analyses, certain inferential methods and the independent evaluation of feature selection. Final details will be confirmed in the official release notes.</p>
+<h2 id="releases-and-roadmap" tabindex="-1">Releases and roadmap</h2>
+<p>Elessar evolves with a consistent priority: improve statistical reliability without sacrificing practical usefulness.</p>
+<h3 id="version-1-1-released" tabindex="-1">Version 1.1 — Released</h3>
+<p>An exploratory analysis library integrating descriptive statistics, quality diagnostics, distribution analysis, associations, multivariate methods, time series and report generation.</p>
+<h3 id="version-1-2-in-preparation" tabindex="-1">Version 1.2 — In preparation</h3>
+<p>An update focused on statistical robustness, preventing contamination during supervised selection, numerical validation and consistency between code, documentation and displayed results.</p>
+<p>It will be published after the release checks have been validated.</p>
+<h3 id="looking-ahead" tabindex="-1">Looking ahead</h3>
+<p>Future development will explore adapting inference methods to data structures, statistical calibration through simulation, variable-provenance diagnostics and more advanced measures of uncertainty.</p>
+<p>These are development goals, not features already available.</p>
+<p><a href="https://github.com/Thibautdqb/elessar/releases" target="_blank" rel="noopener noreferrer">Follow development and release notes on GitHub</a>.</p></article><footer><p>Elessar — Automated exploratory data analysis and statistical profiling.</p>
+<p>An open-source Python library for understanding data, examining relationships and preparing more reliable analyses.</p>
+<p><a href="https://github.com/Thibautdqb/elessar#api" target="_blank" rel="noopener noreferrer">Documentation</a> · <a href="https://github.com/Thibautdqb/elessar" target="_blank" rel="noopener noreferrer">GitHub</a> · <a href="https://pypi.org/project/elessar/" target="_blank" rel="noopener noreferrer">PyPI</a> · <a href="https://github.com/Thibautdqb/elessar/releases" target="_blank" rel="noopener noreferrer">Release notes</a> · <a href="guide.html#methodology">Scientific methodology</a> · <a href="https://github.com/Thibautdqb/elessar#license" target="_blank" rel="noopener noreferrer">MIT licence</a></p>
+<p>Statistical results depend on the data, methods and their assumptions. Automated diagnostics are intended to inform analysis, alongside validation appropriate to the context.</p><a href="index.html">Return to the five perspectives ↑</a></footer></main></body></html>

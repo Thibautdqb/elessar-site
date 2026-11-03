@@ -1,0 +1,27 @@
+{
+  "repository": "https://github.com/Thibautdqb/elessar",
+  "commit": "2262600bc335e535297bfc64b05b646e6172590f",
+  "role": "Published Elessar demonstration outputs; not the user's unattached report.",
+  "figures": [
+    {
+      "file": "numeric_distribution.png",
+      "source_path": "docs/numeric_distribution.png",
+      "git_blob_sha": "e768ca391c375ba44d8c7bf17b7fc8e6b5779bba"
+    },
+    {
+      "file": "association_heatmap.png",
+      "source_path": "docs/association_heatmap.png",
+      "git_blob_sha": "e63654b6c163436cc249b8c0098829b859f7ef4d"
+    },
+    {
+      "file": "factor_analysis.png",
+      "source_path": "docs/factor_analysis.png",
+      "git_blob_sha": "1b72d14df3bf846824de3b0564b19b178dd28089"
+    },
+    {
+      "file": "feature_selection.png",
+      "source_path": "docs/feature_selection.png",
+      "git_blob_sha": "1494737f6f144091f4e82f071d1189d4eeca24b9"
+    }
+  ]
+}

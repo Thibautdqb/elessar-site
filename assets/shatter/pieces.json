@@ -1,0 +1,160 @@
+{
+  "width": 2000,
+  "height": 2000,
+  "source_frame": "elessar_shatter_000(1).png",
+  "pieces": [
+    {
+      "key": "top-left",
+      "src": "top-left.webp",
+      "bounds": [
+        316,
+        217,
+        1041,
+        930
+      ],
+      "x": 316,
+      "y": 217,
+      "width": 725,
+      "height": 713,
+      "center": [
+        678.5,
+        573.5
+      ],
+      "normalized_bounds": [
+        0.158,
+        0.1085,
+        0.5205,
+        0.465
+      ],
+      "visible_pixels": 286718,
+      "bytes": 435992,
+      "sha256": "28350db24cec59c079a7513a15726904b28e26006ae6ae30ced60a19d1c248fe",
+      "fragmentable": true
+    },
+    {
+      "key": "top-right",
+      "src": "top-right.webp",
+      "bounds": [
+        1004,
+        249,
+        1679,
+        929
+      ],
+      "x": 1004,
+      "y": 249,
+      "width": 675,
+      "height": 680,
+      "center": [
+        1341.5,
+        589
+      ],
+      "normalized_bounds": [
+        0.502,
+        0.1245,
+        0.8395,
+        0.4645
+      ],
+      "visible_pixels": 209171,
+      "bytes": 305304,
+      "sha256": "7360c75c630bf5871d1be4043fad3ccb8141e6e970d3eb81c2da325f4a772e56",
+      "fragmentable": true
+    },
+    {
+      "key": "bottom-left",
+      "src": "bottom-left.webp",
+      "bounds": [
+        314,
+        901,
+        1041,
+        1781
+      ],
+      "x": 314,
+      "y": 901,
+      "width": 727,
+      "height": 880,
+      "center": [
+        677.5,
+        1341
+      ],
+      "normalized_bounds": [
+        0.157,
+        0.4505,
+        0.5205,
+        0.8905
+      ],
+      "visible_pixels": 274126,
+      "bytes": 411084,
+      "sha256": "5fd11a9fe1dd8a8f3c85a763b1689ace4faf66439997e477b1a35e5e79c39230",
+      "fragmentable": true
+    },
+    {
+      "key": "bottom-right",
+      "src": "bottom-right.webp",
+      "bounds": [
+        1004,
+        903,
+        1680,
+        1765
+      ],
+      "x": 1004,
+      "y": 903,
+      "width": 676,
+      "height": 862,
+      "center": [
+        1342,
+        1334
+      ],
+      "normalized_bounds": [
+        0.502,
+        0.4515,
+        0.84,
+        0.8825
+      ],
+      "visible_pixels": 225334,
+      "bytes": 316454,
+      "sha256": "6da99e676cd8a3bace6cd1aad17209a5d5fc4fc87a8b1ba6f8a7862f6bc82209",
+      "fragmentable": true
+    },
+    {
+      "key": "core",
+      "src": "core.webp",
+      "bounds": [
+        866,
+        696,
+        1179,
+        1136
+      ],
+      "x": 866,
+      "y": 696,
+      "width": 313,
+      "height": 440,
+      "center": [
+        1022.5,
+        916
+      ],
+      "normalized_bounds": [
+        0.433,
+        0.348,
+        0.5895,
+        0.568
+      ],
+      "visible_pixels": 69590,
+      "bytes": 93138,
+      "sha256": "1f523695f444d8d61d0fc0e19a8db02fa7fc5fcef2dd8c134ccaab05c1452a67",
+      "fragmentable": false
+    }
+  ],
+  "core_is_intact": true,
+  "reconstruction": "At rest, draw each crop at x,y in a 2000x2000 coordinate space. All visible source RGBA pixels and alpha are preserved exactly, without overlaps or gaps.",
+  "poster_calibration": {
+    "poster_width": 900,
+    "poster_height": 900,
+    "source_to_poster": {
+      "scale": 0.5,
+      "translate_x": -50,
+      "translate_y": -50
+    },
+    "sprite_box_relative_to_poster_box": 1.1111111111111112,
+    "same_center": true
+  }
+}

@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#05090b"><meta name="robots" content="noindex,nofollow"><title>elessar. — See further into your data</title><meta name="description" content="See further into your data with Elessar. Scroll through the introduction, then explore five perspectives on the library, its report and its statistical methods."><link rel="preload" href="assets/models/elessar-poster.png" as="image"><style>@font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:400;font-display:swap;src:url('assets/fonts/ibm-plex-sans-latin-400-normal.woff2') format('woff2');}
+@font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:500;font-display:swap;src:url('assets/fonts/ibm-plex-sans-latin-500-normal.woff2') format('woff2');}
+@font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:600;font-display:swap;src:url('assets/fonts/ibm-plex-sans-latin-600-normal.woff2') format('woff2');}
+@font-face{font-family:'Instrument Serif';font-style:normal;font-weight:400;font-display:swap;src:url('assets/fonts/instrument-serif-latin-400-normal.woff2') format('woff2');}
+@font-face{font-family:'Instrument Serif';font-style:italic;font-weight:400;font-display:swap;src:url('assets/fonts/instrument-serif-latin-400-italic.woff2') format('woff2');}
+html{background:#05090b;scrollbar-gutter:stable;scroll-snap-type:y proximity}
+body{margin:0;background:#05090b}
+#elessar-constellation{--ink:#f0f4ec;--muted:#b9ccc3;--green:#a0ffda;--pink:#e7a0d3;--line:#bbebd42e;--sans:'IBM Plex Sans',Arial,sans-serif;--serif:'Instrument Serif',Georgia,serif;--mono:Consolas,monospace;color-scheme:dark;color:var(--ink);font:400 14px/1.65 var(--sans);isolation:isolate;position:relative;overflow-x:clip}
+#elessar-constellation *,#elessar-constellation *::before,#elessar-constellation *::after{box-sizing:border-box}
+#elessar-constellation [hidden]{display:none!important}
+#elessar-constellation a{color:inherit;text-decoration:none}
+#elessar-constellation button{font:inherit;cursor:pointer;color:inherit}
+#elessar-constellation a:focus-visible,#elessar-constellation button:focus-visible,#elessar-constellation summary:focus-visible{outline:2px solid var(--green);outline-offset:5px}
+#elessar-constellation ::selection{background:var(--green);color:#052018}
+#elessar-constellation .fx-sr-only,#elessar-constellation .fx-choice{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+#elessar-constellation .fx-skip{position:fixed;z-index:200;top:8px;left:20px;padding:10px 16px;transform:translateY(-160%);color:#07140e;background:var(--ink)}
+#elessar-constellation .fx-skip:focus{transform:none}
+#elessar-constellation .fx-background{position:fixed;inset:0;z-index:0;pointer-events:none}
+#elessar-constellation .fx-background img{width:100%;height:100%;object-fit:cover;object-position:50% 35%;opacity:.72}
+#elessar-constellation .fx-background::after{content:'';position:absolute;inset:0;background:linear-gradient(#05090bd9,#05090ba3 50%,#05090bdb),linear-gradient(90deg,#05090bc9,transparent 50%,#05090b9c)}
+#elessar-constellation .fx-header{height:76px;position:fixed;inset:0 0 auto;z-index:50;display:flex;align-items:center;gap:36px;padding:18px clamp(24px,4.2vw,72px);background:linear-gradient(#05090bf5,#05090bd1 80%,transparent)}
+#elessar-constellation .fx-wordmark{font:600 31px/1 var(--sans);letter-spacing:-1.8px;white-space:nowrap}
+#elessar-constellation .fx-wordmark b{color:var(--green);font-weight:600}
+#elessar-constellation .fx-header nav{display:flex;align-items:center;gap:30px;margin-left:auto;font-size:11px;color:var(--muted)}
+#elessar-constellation .fx-header nav a{padding:8px 0;border-bottom:1px solid transparent}
+#elessar-constellation .fx-header nav a:hover{color:var(--green);border-color:var(--green)}
+#elessar-constellation .fx-header .fx-install{font:10px/1.7 var(--mono);padding:9px 14px;border:1px solid #a0ffda57;background:#092018b3}
+#elessar-constellation .fx-screen{height:100svh;min-height:0;position:relative;scroll-snap-align:start}
+#elessar-constellation .fx-first{display:grid;grid-template-rows:auto minmax(0,1fr) 44px;padding:86px 0 12px}
+#elessar-constellation .fx-intro{padding:10px clamp(25px,6vw,100px) 10px;position:relative;z-index:20;display:flex;justify-content:space-between;align-items:flex-end;gap:50px}
+#elessar-constellation .fx-eyebrow{font:9px/1.8 var(--mono);letter-spacing:1.3px;text-transform:uppercase;color:var(--green);margin:0 0 13px}
+#elessar-constellation h1{font:400 clamp(45px,5vw,74px)/1 var(--serif);letter-spacing:-.04em;margin:0}
+#elessar-constellation h1 em{font-weight:400;color:var(--green)}
+#elessar-constellation .fx-intro-copy{max-width:330px;font-size:12px;line-height:1.95;color:var(--muted);margin:0 0 4px}
+#elessar-constellation .fx-stage{position:relative;min-height:0;--label-offset:95px;--core-offset:70px}
+#elessar-constellation .fx-stage::before{content:'';position:absolute;left:50%;top:48%;width:270px;height:270px;transform:translate(-50%,-50%);border-radius:50%;background:radial-gradient(#55efb80b,transparent 69%);pointer-events:none}
+#elessar-constellation .fx-category{position:absolute;z-index:20;width:clamp(190px,19vw,285px);padding:14px 0;border-top:1px solid var(--line);transition:border-color .2s,color .2s;display:block}
+#elessar-constellation .fx-category::after{content:'';position:absolute;width:4px;height:4px;border:1px solid var(--green);border-radius:50%;top:-2.5px;right:0}
+#elessar-constellation .fx-category:hover{border-color:#a0ffda99;color:var(--green)}
+#elessar-constellation .fx-category-name{display:flex;justify-content:space-between;align-items:baseline;gap:12px;font:400 clamp(23px,2.45vw,36px)/1.08 var(--serif);letter-spacing:-.015em}
+#elessar-constellation .fx-category-name>span{font:14px var(--sans);color:var(--green)}
+#elessar-constellation .fx-category-caption{display:block;font-size:10px;line-height:1.8;color:var(--muted);margin-top:9px;max-width:220px}
+#elessar-constellation .fx-category[data-piece="top-left"],#elessar-constellation .fx-category[data-piece="bottom-left"]{left:6%;transform:translateY(-50%)}
+#elessar-constellation .fx-category[data-piece="top-right"],#elessar-constellation .fx-category[data-piece="bottom-right"]{right:6%;transform:translateY(-50%)}
+#elessar-constellation .fx-category[data-piece="top-left"],#elessar-constellation .fx-category[data-piece="top-right"]{top:24%}
+#elessar-constellation .fx-category[data-piece="bottom-left"],#elessar-constellation .fx-category[data-piece="bottom-right"]{top:74%}
+#elessar-constellation .fx-category[data-piece="core"]{left:50%;top:calc(48% + var(--core-offset));transform:translateX(-50%);width:190px;text-align:center;border-top:0;padding:7px 0}
+#elessar-constellation .fx-category[data-piece="core"]::after{display:none}
+#elessar-constellation .fx-category[data-piece="core"] .fx-category-name{justify-content:center;font-size:27px}
+#elessar-constellation .fx-category[data-piece="core"] .fx-category-caption{font:9px/1.8 var(--mono);margin-top:6px}
+#elessar-constellation .fx-piece-hit{position:absolute;z-index:18;display:block;background:transparent;border-radius:15%;outline-offset:-5px}
+#elessar-constellation .fx-first-bottom{position:relative;z-index:20;display:flex;justify-content:space-between;align-items:center;gap:20px;margin-inline:clamp(25px,4.2vw,72px);border-top:1px solid var(--line);font:9px/1.6 var(--mono);color:var(--muted)}
+#elessar-constellation .fx-first-bottom a{color:var(--green)}
+#elessar-constellation .fx-controls{display:flex;align-items:center;gap:22px}
+#elessar-constellation .fx-controls button{border:0;background:#07150fba;font:9px/1.7 var(--mono);padding:8px 0;min-height:36px}
+#elessar-constellation .fx-controls button:first-child{color:var(--green)}
+#elessar-constellation .fx-controls button:disabled{cursor:default;color:var(--muted)}
+#elessar-constellation .fx-art{position:fixed;inset:0;z-index:15;pointer-events:none;overflow:hidden}
+#elessar-constellation .fx-art canvas{position:absolute;inset:0;width:100%;height:100%;opacity:0;transition:opacity .35s}
+#elessar-constellation[data-rendering="webgl"] .fx-art canvas{opacity:1}
+#elessar-constellation .fx-fallback{position:absolute;inset:0;opacity:0;transition:opacity .35s}
+#elessar-constellation[data-fallback-ready] .fx-fallback{opacity:1}
+#elessar-constellation[data-rendering="webgl"] .fx-fallback{opacity:0}
+#elessar-constellation .fx-fallback-piece{position:absolute;left:0;top:0;transform-origin:50% 50%;will-change:transform;display:block}
+#elessar-constellation .fx-fallback-piece img{width:100%;height:100%;display:block;user-select:none}
+#elessar-constellation .fx-poster{position:absolute;left:50%;top:54%;transform:translate(-50%,-50%);height:48svh;width:48svh;object-fit:contain}
+#elessar-constellation[data-fallback-ready] .fx-poster,#elessar-constellation[data-rendering="webgl"] .fx-poster{opacity:0;visibility:hidden}
+#elessar-constellation .fx-reader{position:fixed;inset:0;z-index:100;width:100%;height:100dvh;max-width:none;max-height:none;margin:0;padding:clamp(12px,3vw,44px);border:0;background:#020807b8;color:var(--ink);overflow:hidden}
+#elessar-constellation .fx-reader:not([open]){display:none}
+#elessar-constellation .fx-reader::backdrop{background:#020807b8;backdrop-filter:blur(14px)}
+#elessar-constellation .fx-reader-shell{height:100%;width:100%;max-width:1440px;margin:0 auto;display:grid;grid-template-rows:72px minmax(0,1fr);border:1px solid #648d7866;background:#08110f;box-shadow:0 35px 100px #0008}
+#elessar-constellation .fx-reader-top{display:flex;align-items:center;gap:35px;padding:18px 30px;border-bottom:1px solid var(--line)}
+#elessar-constellation .fx-reader-top .fx-wordmark{font-size:27px}
+#elessar-constellation .fx-reader-title{font:10px/1.7 var(--mono);color:var(--muted)}
+#elessar-constellation .fx-reader-close{margin-left:auto;min-height:40px;padding:7px 13px;background:none;border:1px solid #a0ffda5c;font-size:11px}
+#elessar-constellation .fx-reader-close span{margin-left:18px;color:var(--green);font-size:20px;line-height:1}
+#elessar-constellation .fx-reader-body{min-height:0;display:grid;grid-template-columns:220px minmax(0,1fr)}
+#elessar-constellation .fx-reader-side{border-right:1px solid var(--line);padding:30px 24px;overflow:auto}
+#elessar-constellation .fx-reader-side nav{display:grid;gap:2px}
+#elessar-constellation .fx-reader-side a{font-size:12px;line-height:1.7;padding:10px 0;border-bottom:1px solid transparent;color:var(--muted)}
+#elessar-constellation .fx-reader-side a[aria-current]{color:var(--green);border-color:#a0ffda66}
+#elessar-constellation .fx-reader-side .fx-reader-extra{margin-top:32px;padding-top:18px;border-top:1px solid var(--line);display:grid;gap:10px;font:9px/1.8 var(--mono);color:var(--muted)}
+#elessar-constellation .fx-reader-scroll{padding:40px clamp(28px,6vw,100px) 65px;overflow-y:auto;overscroll-behavior:contain;scrollbar-color:#568572 #08110f;scrollbar-width:thin;min-height:0;scroll-behavior:auto}
+#elessar-constellation .fx-reader article{max-width:760px;margin-inline:auto}
+#elessar-constellation .fx-reader article h2{font:400 clamp(34px,3.6vw,54px)/1.1 var(--serif);letter-spacing:-.02em;margin:40px 0 23px;color:var(--green);scroll-margin-top:25px}
+#elessar-constellation .fx-reader article h2:first-of-type{margin-top:0}
+#elessar-constellation .fx-reader article h3{font:500 18px/1.5 var(--sans);margin:34px 0 13px;color:var(--ink)}
+#elessar-constellation .fx-reader article p,#elessar-constellation .fx-reader article li{font-size:14px;line-height:1.95;color:#c8d5cd;margin:0 0 17px}
+#elessar-constellation .fx-reader article ul{padding-left:22px;margin-bottom:24px}
+#elessar-constellation .fx-reader article li{margin-bottom:5px}
+#elessar-constellation .fx-reader article a{color:var(--green);border-bottom:1px solid #a0ffda66;padding-bottom:2px}
+#elessar-constellation .fx-reader article pre{margin:24px 0;padding:22px 25px;background:#040b09;border:1px solid var(--line);font:12px/1.9 var(--mono);overflow:auto;color:var(--green)}
+#elessar-constellation .fx-reader article code{font-family:var(--mono);font-size:.9em}
+#elessar-constellation .fx-reader-intro{font:9px/1.8 var(--mono);text-transform:uppercase;letter-spacing:.9px;color:var(--muted);margin:0 0 20px}
+#elessar-constellation .fx-reader-toc{display:flex;gap:8px 18px;flex-wrap:wrap;padding:0 0 25px;margin-bottom:22px;border-bottom:1px solid var(--line);font-size:10px}
+#elessar-constellation .fx-reader-toc a{border:0!important;color:var(--muted)!important}
+#elessar-constellation .fx-reader article .fx-copy-command{border:1px solid var(--line);background:#0c2018;color:var(--green);padding:8px 13px;font:10px var(--mono);margin:4px 0 20px;min-height:36px}
+#elessar-constellation .fx-second{padding:86px clamp(25px,6vw,100px) 18px;display:grid;grid-template-rows:auto minmax(0,1fr) auto;gap:16px;background:#05090bf5}
+#elessar-constellation .fx-results-heading{position:relative;z-index:20;display:flex;gap:50px;justify-content:space-between;align-items:end}
+#elessar-constellation .fx-results-heading .fx-eyebrow{margin-bottom:8px}
+#elessar-constellation .fx-results-heading h2{font:400 clamp(37px,4.4vw,62px)/1 var(--serif);letter-spacing:-.025em;margin:0}
+#elessar-constellation .fx-results-heading h2 em{font-weight:400;color:var(--green);margin-left:13px}
+#elessar-constellation .fx-results-intro{font-size:11px;line-height:1.9;color:var(--muted);max-width:300px;margin:0}
+#elessar-constellation .fx-report-gallery{min-height:0;display:grid;grid-template-rows:minmax(0,1fr) auto;position:relative;z-index:12}
+#elessar-constellation .fx-output-switch{border:0;padding:0;margin:0;min-width:0;min-height:0;display:grid;grid-template-rows:44px minmax(0,1fr)}
+#elessar-constellation .fx-output-tabs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;border-block:1px solid var(--line)}
+#elessar-constellation .fx-output-tabs label{display:flex;align-items:center;position:relative;font-size:10px;color:var(--muted);cursor:pointer;min-width:0}
+#elessar-constellation .fx-output-tabs label::after{content:'';position:absolute;bottom:-1px;left:0;right:15px;height:2px;background:var(--green);transform:scaleX(0);transform-origin:left}
+#elessar-constellation #fx-view-distribution:checked~.fx-output-tabs label[for="fx-view-distribution"],#elessar-constellation #fx-view-associations:checked~.fx-output-tabs label[for="fx-view-associations"],#elessar-constellation #fx-view-factors:checked~.fx-output-tabs label[for="fx-view-factors"],#elessar-constellation #fx-view-selection:checked~.fx-output-tabs label[for="fx-view-selection"]{color:var(--green)}
+#elessar-constellation #fx-view-distribution:checked~.fx-output-tabs label[for="fx-view-distribution"]::after,#elessar-constellation #fx-view-associations:checked~.fx-output-tabs label[for="fx-view-associations"]::after,#elessar-constellation #fx-view-factors:checked~.fx-output-tabs label[for="fx-view-factors"]::after,#elessar-constellation #fx-view-selection:checked~.fx-output-tabs label[for="fx-view-selection"]::after{transform:scaleX(1)}
+#elessar-constellation .fx-choice:focus-visible~.fx-output-tabs{outline:2px solid var(--green);outline-offset:4px}
+#elessar-constellation .fx-output-panels{min-height:0;padding-top:12px}
+#elessar-constellation .fx-output{display:none;margin:0;height:100%;min-height:0;grid-template-columns:minmax(0,2.8fr) minmax(200px,1fr);gap:30px;align-items:center}
+#elessar-constellation #fx-view-distribution:checked~.fx-output-panels #fx-plot-distribution,#elessar-constellation #fx-view-associations:checked~.fx-output-panels #fx-plot-associations,#elessar-constellation #fx-view-factors:checked~.fx-output-panels #fx-plot-factors,#elessar-constellation #fx-view-selection:checked~.fx-output-panels #fx-plot-selection{display:grid}
+#elessar-constellation .fx-plot-link{display:block;height:100%;min-height:0;max-height:100%;background:#0b121c;border:1px solid #c1ead52b}
+#elessar-constellation .fx-output img{display:block;width:100%;height:100%;min-height:0;object-fit:contain}
+#elessar-constellation .fx-caption{font-size:11px;max-height:100%;overflow:auto;scrollbar-width:thin;scrollbar-color:#a0ffda55 transparent}
+#elessar-constellation .fx-figure-label{font:8px/1.8 var(--mono);color:var(--muted);margin-bottom:12px}
+#elessar-constellation .fx-caption h3{font:400 26px/1.12 var(--serif);margin:0 0 13px}
+#elessar-constellation .fx-caption p{font-size:11px;line-height:1.85;color:var(--muted);margin:0}
+#elessar-constellation .fx-caption .fx-source{display:inline-block;font:8px/1.8 var(--mono);color:var(--green);margin:13px 0 0;border-bottom:1px solid var(--line)}
+#elessar-constellation .fx-provenance{font-size:8px;line-height:1.6;color:var(--muted);margin:7px 0 0;max-width:1000px}
+#elessar-constellation .fx-footer{position:relative;padding-top:8px;min-height:0}
+#elessar-constellation .fx-footer-common{position:relative;z-index:20;max-width:calc(100% - 200px);font-size:9px;line-height:1.7;color:var(--muted);margin-bottom:15px}
+#elessar-constellation .fx-footer-common p{margin:0 0 5px}
+#elessar-constellation .fx-footer-common p:first-child{color:var(--ink)}
+#elessar-constellation .fx-footer-common p:last-child{font-size:8px;max-width:850px;margin-top:8px}
+#elessar-constellation .fx-footer-common a{color:var(--green);white-space:nowrap}
+#elessar-constellation .fx-footer-brand{font:600 clamp(70px,10.3vw,160px)/.9 var(--sans);letter-spacing:-.065em;position:relative;z-index:20;width:70%}
+#elessar-constellation .fx-footer-brand span{color:var(--green)}
+#elessar-constellation .fx-endstone{position:absolute;width:170px;height:115px;right:1%;bottom:40px;pointer-events:none}
+#elessar-constellation .fx-footer-meta{display:flex;justify-content:space-between;gap:15px 30px;border-top:1px solid var(--line);padding-top:12px;margin-top:13px;font:9px/1.7 var(--mono);color:var(--muted);position:relative;z-index:20}
+#elessar-constellation .fx-footer-meta a{color:var(--green)}
+@media(max-width:1100px){
+  #elessar-constellation .fx-category{width:20%;}
+  #elessar-constellation .fx-category[data-piece="top-left"],#elessar-constellation .fx-category[data-piece="bottom-left"]{left:4%}
+  #elessar-constellation .fx-category[data-piece="top-right"],#elessar-constellation .fx-category[data-piece="bottom-right"]{right:4%}
+  #elessar-constellation .fx-category-caption{font-size:9px;max-width:180px}
+  #elessar-constellation .fx-reader-body{grid-template-columns:190px minmax(0,1fr)}
+  #elessar-constellation .fx-reader-side{padding:25px 20px}
+}
+@media(max-width:720px){
+  #elessar-constellation .fx-header{height:64px;padding:12px 22px;gap:20px}
+  #elessar-constellation .fx-wordmark{font-size:29px}
+  #elessar-constellation .fx-header nav{gap:18px;font-size:10px}
+  #elessar-constellation .fx-header .fx-install{padding:8px 10px;font-size:9px}
+  #elessar-constellation .fx-header .fx-github{display:none}
+  #elessar-constellation .fx-first{padding:69px 0 8px;grid-template-rows:auto minmax(0,1fr) 43px}
+  #elessar-constellation .fx-intro{display:block;padding:9px 24px 0}
+  #elessar-constellation .fx-eyebrow{font-size:8px;letter-spacing:.9px;margin-bottom:8px}
+  #elessar-constellation h1{font-size:clamp(33px,9.3vw,48px);line-height:1.02}
+  #elessar-constellation .fx-intro-copy{font-size:10px;line-height:1.75;max-width:340px;margin:10px 0 0}
+  #elessar-constellation .fx-category{width:45%;padding:5px 7px 3px;text-align:center;border:0;transform:translateX(-50%)!important;background:radial-gradient(ellipse at center,#05090bdb,transparent 70%)}
+  #elessar-constellation .fx-category::after{display:none}
+  #elessar-constellation .fx-category-name{font-size:clamp(18px,5vw,25px);line-height:1.06;justify-content:center;gap:7px}
+  #elessar-constellation .fx-category-name>span{font-size:10px}
+  #elessar-constellation .fx-category-caption{display:none}
+  #elessar-constellation .fx-category[data-piece="top-left"],#elessar-constellation .fx-category[data-piece="bottom-left"]{left:26%;right:auto}
+  #elessar-constellation .fx-category[data-piece="top-right"],#elessar-constellation .fx-category[data-piece="bottom-right"]{left:74%;right:auto}
+  #elessar-constellation .fx-category[data-piece="top-left"],#elessar-constellation .fx-category[data-piece="top-right"]{top:calc(20% + var(--label-offset))}
+  #elessar-constellation .fx-category[data-piece="bottom-left"],#elessar-constellation .fx-category[data-piece="bottom-right"]{top:calc(72% + var(--label-offset))}
+  #elessar-constellation .fx-category[data-piece="core"]{left:50%;top:calc(43% + var(--core-offset));width:50%;padding:3px 0}
+  #elessar-constellation .fx-category[data-piece="core"] .fx-category-name{font-size:23px}
+  #elessar-constellation .fx-category[data-piece="core"] .fx-category-caption{font-size:8px;margin-top:4px}
+  #elessar-constellation .fx-first-bottom{font-size:8px;margin-inline:24px;gap:12px}
+  #elessar-constellation .fx-first-bottom .fx-explore-hint{display:none}
+  #elessar-constellation .fx-controls{gap:14px}
+  #elessar-constellation .fx-controls button{font-size:8px}
+  #elessar-constellation .fx-poster{width:56vw;height:56vw;top:56%}
+  #elessar-constellation .fx-reader{padding:8px}
+  #elessar-constellation .fx-reader-shell{grid-template-rows:62px minmax(0,1fr)}
+  #elessar-constellation .fx-reader-top{padding:12px 18px;gap:18px}
+  #elessar-constellation .fx-reader-top .fx-wordmark{font-size:25px}
+  #elessar-constellation .fx-reader-title{font-size:8px;max-width:110px;line-height:1.5}
+  #elessar-constellation .fx-reader-close{min-height:36px;font-size:10px;padding:6px 10px}
+  #elessar-constellation .fx-reader-close span{margin-left:10px}
+  #elessar-constellation .fx-reader-body{grid-template-columns:1fr;grid-template-rows:auto minmax(0,1fr)}
+  #elessar-constellation .fx-reader-side{padding:8px 16px;border-right:0;border-bottom:1px solid var(--line);overflow-x:auto;overflow-y:hidden}
+  #elessar-constellation .fx-reader-side nav{display:flex;gap:20px;width:max-content;max-width:none}
+  #elessar-constellation .fx-reader-side a{font-size:10px;white-space:nowrap;padding:7px 0}
+  #elessar-constellation .fx-reader-side .fx-reader-extra{display:none}
+  #elessar-constellation .fx-reader-scroll{padding:27px 22px 50px}
+  #elessar-constellation .fx-reader article h2{font-size:35px}
+  #elessar-constellation .fx-reader article h3{font-size:16px;margin-top:28px}
+  #elessar-constellation .fx-reader article p,#elessar-constellation .fx-reader article li{font-size:13px;line-height:1.9}
+  #elessar-constellation .fx-reader article pre{padding:17px;font-size:11px}
+  #elessar-constellation .fx-second{padding:75px 24px 13px;gap:11px}
+  #elessar-constellation .fx-results-heading{display:block}
+  #elessar-constellation .fx-results-heading h2{font-size:clamp(34px,8.9vw,50px)}
+  #elessar-constellation .fx-results-heading h2 em{margin-left:9px}
+  #elessar-constellation .fx-results-intro{display:none}
+  #elessar-constellation .fx-output-switch{grid-template-rows:40px minmax(0,1fr)}
+  #elessar-constellation .fx-output-tabs{gap:10px}
+  #elessar-constellation .fx-output-tabs label{font-size:8px;line-height:1.6}
+  #elessar-constellation .fx-output-panels{padding-top:10px}
+  #elessar-constellation .fx-output{grid-template-columns:1fr;grid-template-rows:minmax(0,1fr) auto;gap:10px}
+  #elessar-constellation .fx-caption{max-height:62px}
+  #elessar-constellation .fx-figure-label{font-size:7px;margin-bottom:3px}
+  #elessar-constellation .fx-caption h3{font:500 12px/1.4 var(--sans);margin-bottom:4px}
+  #elessar-constellation .fx-caption p{font-size:9px;line-height:1.65}
+  #elessar-constellation .fx-caption .fx-source{font-size:8px;margin-top:8px}
+  #elessar-constellation .fx-provenance{font-size:7px;line-height:1.5;margin-top:5px;max-height:22px;overflow:auto}
+  #elessar-constellation .fx-footer{padding-top:0}
+  #elessar-constellation .fx-footer-common{font-size:8px;line-height:1.65;max-width:100%;margin-bottom:12px}
+  #elessar-constellation .fx-footer-common p{margin-bottom:4px}
+  #elessar-constellation .fx-footer-common p:last-child{font-size:7px;margin-top:6px}
+  #elessar-constellation .fx-footer-brand{font-size:clamp(63px,16vw,100px);line-height:.9}
+  #elessar-constellation .fx-endstone{width:75px;height:62px;right:1%;bottom:30px}
+  #elessar-constellation .fx-footer-meta{font-size:8px;padding-top:9px;margin-top:9px;gap:10px}
+  #elessar-constellation .fx-footer-meta>span:first-child{display:none}
+}
+@media(max-height:700px){
+  #elessar-constellation .fx-intro{padding-top:0}
+  #elessar-constellation h1{font-size:clamp(30px,4.3vw,56px)}
+  #elessar-constellation .fx-intro-copy{font-size:10px;max-width:300px}
+  #elessar-constellation .fx-category-caption{display:none}
+  #elessar-constellation .fx-footer-brand{font-size:65px}
+  #elessar-constellation .fx-endstone{height:65px;width:90px}
+  #elessar-constellation .fx-footer-common{font-size:8px;margin-bottom:8px}
+  #elessar-constellation .fx-results-heading h2{font-size:34px}
+}
+@media(max-height:500px) and (min-width:721px){
+  #elessar-constellation .fx-first{padding-top:70px}
+  #elessar-constellation h1{font-size:32px}
+  #elessar-constellation .fx-eyebrow{margin-bottom:5px}
+  #elessar-constellation .fx-footer-common{max-height:65px;overflow:auto}
+  #elessar-constellation .fx-footer-brand{font-size:50px}
+  #elessar-constellation .fx-second{padding-top:75px}
+  #elessar-constellation .fx-footer-meta{padding-top:7px;margin-top:8px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-snap-type:none}#elessar-constellation .fx-art canvas,#elessar-constellation .fx-fallback,#elessar-constellation .fx-category{transition:none}}
+
+html{scroll-snap-type:none}
+#elessar-constellation .cs-journey{height:380svh;position:relative}
+#elessar-constellation .cs-pin{position:sticky;top:0;overflow:hidden}
+#elessar-constellation .cs-intro{position:absolute;z-index:20;top:50%;left:clamp(25px,7vw,115px);width:44%;max-width:670px;transform:translateY(-48%);display:none}
+#elessar-constellation[data-enhanced] .cs-intro{display:block}
+#elessar-constellation .cs-copy-window{overflow:hidden;width:100%;padding:10px 0}
+#elessar-constellation .cs-copy-track{display:flex;align-items:stretch;width:100%;will-change:transform}
+#elessar-constellation .cs-copy-slide{flex:0 0 100%;min-width:0;min-height:340px;padding:0 18px 0 0;display:flex;flex-direction:column;justify-content:center}
+#elessar-constellation .cs-copy-slide h1,#elessar-constellation .cs-copy-slide h2{font:400 clamp(52px,5.7vw,86px)/1.02 var(--serif);letter-spacing:-.04em;margin:0 0 25px}
+#elessar-constellation .cs-copy-slide h1 em,#elessar-constellation .cs-copy-slide h2 em{color:var(--green);font-weight:400}
+#elessar-constellation .cs-copy-slide>p:not(.fx-eyebrow){font-size:14px;line-height:1.95;color:var(--muted);max-width:420px;margin:0}
+#elessar-constellation .cs-intro-actions{display:flex;align-items:center;gap:22px 28px;margin-top:29px;flex-wrap:wrap}
+#elessar-constellation .cs-intro-actions a{font-size:11px;line-height:1.8;padding-block:9px;border-bottom:1px solid #a0ffda77}
+#elessar-constellation .cs-intro-actions a span{color:var(--green);margin-left:21px}
+#elessar-constellation .cs-intro-actions code{font:10px/1.8 var(--mono);color:var(--green)}
+#elessar-constellation .cs-progress{display:flex;align-items:center;gap:9px;margin-top:29px;max-width:235px}
+#elessar-constellation .cs-progress span{height:1px;background:#bfead23d;flex:1;position:relative}
+#elessar-constellation .cs-progress span::before{content:'';position:absolute;inset:0;background:var(--green);transform:scaleX(var(--fill,0));transform-origin:left}
+#elessar-constellation .cs-progress-note{color:var(--muted);font:9px/1.7 var(--mono);margin-top:14px}
+#elessar-constellation .cs-jewel-anchor{position:absolute;left:53%;right:1%;top:25%;bottom:20%;pointer-events:none}
+#elessar-constellation .cs-five-title{font:400 clamp(45px,5vw,74px)/1 var(--serif);letter-spacing:-.04em;margin:0}
+#elessar-constellation .cs-five-title em{font-weight:400;color:var(--green)}
+#elessar-constellation[data-enhanced] .cs-pin>.fx-intro{opacity:var(--cs-reveal,0);visibility:var(--cs-category-visible,hidden)}
+#elessar-constellation[data-enhanced] .cs-pin .fx-category{opacity:var(--cs-reveal,0);visibility:var(--cs-category-visible,hidden)}
+#elessar-constellation[data-enhanced] .cs-pin [data-assembly]{visibility:var(--cs-category-visible,hidden);opacity:var(--cs-reveal,0)}
+#elessar-constellation[data-enhanced] .fx-poster{left:76%;top:52%;height:48svh;width:48svh}
+#elessar-constellation:not([data-enhanced]) .cs-journey{height:100svh}
+#elessar-constellation .cs-no-script{position:absolute;left:24px;bottom:60px;z-index:20;font:10px/1.8 var(--mono);color:var(--green)}
+@media(max-width:1100px){
+  #elessar-constellation .cs-copy-slide h1,#elessar-constellation .cs-copy-slide h2{font-size:clamp(43px,5.8vw,68px)}
+  #elessar-constellation .cs-copy-slide>p:not(.fx-eyebrow){font-size:12px}
+}
+@media(max-width:720px){
+  #elessar-constellation .fx-header nav>[data-show-perspectives]{display:none}
+  #elessar-constellation .cs-intro{left:24px;top:50%;width:48%;transform:translateY(-47%)}
+  #elessar-constellation .cs-copy-slide{min-height:330px;padding-right:10px}
+  #elessar-constellation .cs-copy-slide h1,#elessar-constellation .cs-copy-slide h2{font-size:clamp(29px,7.8vw,45px);line-height:1.04;margin-bottom:18px}
+  #elessar-constellation .cs-copy-slide>p:not(.fx-eyebrow){font-size:11px;line-height:1.85;max-width:240px}
+  #elessar-constellation .cs-copy-slide .fx-eyebrow{font-size:7px;letter-spacing:.5px;max-width:180px;line-height:1.85;margin-bottom:16px}
+  #elessar-constellation .cs-intro-actions{gap:8px 20px;margin-top:19px}
+  #elessar-constellation .cs-intro-actions a{font-size:9px;padding-block:7px}
+  #elessar-constellation .cs-intro-actions a span{margin-left:11px}
+  #elessar-constellation .cs-intro-actions code{font-size:8px}
+  #elessar-constellation .cs-progress{gap:6px;margin-top:22px;max-width:150px}
+  #elessar-constellation .cs-progress-note{font-size:8px;line-height:1.8;max-width:150px}
+  #elessar-constellation .cs-jewel-anchor{left:55%;right:1%;top:26%;bottom:20%}
+  #elessar-constellation .cs-five-title{font-size:clamp(33px,9.3vw,48px);line-height:1.02}
+  #elessar-constellation[data-enhanced] .fx-poster{left:77%;top:53%;width:43vw;height:43vw}
+}
+@media(max-height:550px) and (min-width:721px){
+  #elessar-constellation .cs-copy-slide{min-height:235px}
+  #elessar-constellation .cs-copy-slide h1,#elessar-constellation .cs-copy-slide h2{font-size:40px;margin-bottom:13px}
+  #elessar-constellation .cs-copy-slide>p:not(.fx-eyebrow){font-size:11px;line-height:1.75;max-width:400px}
+  #elessar-constellation .cs-intro-actions{margin-top:15px}
+  #elessar-constellation .cs-progress{margin-top:18px}
+  #elessar-constellation .cs-copy-slide .fx-eyebrow{margin-bottom:10px}
+}
+@media(prefers-reduced-motion:reduce){#elessar-constellation .cs-copy-track{will-change:auto}}
+</style></head><body><div id="elessar-constellation" lang="en">
+<div class="fx-background" aria-hidden="true"><img src="assets/background/ruins-neon.webp" alt="" width="941" height="1672" fetchpriority="high"></div>
+<a class="fx-skip" href="guide.html#discover" data-open-category="discover">Skip to content</a>
+<header class="fx-header"><a class="fx-wordmark" href="#journey" data-top="" aria-label="elessar. — home">elessar<b>.</b></a><nav aria-label="Main navigation"><a href="#five-perspectives" data-show-perspectives="">Five perspectives</a><a href="#outputs">Report outputs</a><a class="fx-github" href="https://github.com/Thibautdqb/elessar" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a class="fx-install" href="guide.html#get-started" data-open-category="get-started">Get started ↗</a></nav></header>
+<div class="fx-art" aria-hidden="true"><img class="fx-poster" src="assets/models/elessar-poster.png" alt="" width="900" height="900"><div class="fx-fallback" data-five-fallback=""></div><canvas data-five-canvas=""></canvas></div>
+<p class="fx-sr-only" data-live="" aria-live="polite"></p>
+<main><section aria-label="Discover Elessar, then explore five perspectives" data-journey="" id="journey" class="cs-journey"><section data-pin="" class="fx-screen fx-first cs-pin" id="five-perspectives" aria-label="Five perspectives on Elessar"><div class="cs-intro" data-intro-copy=""><div class="cs-copy-window"><div class="cs-copy-track" data-intro-track="">
+<article class="cs-copy-slide" data-intro-slide="0"><p class="fx-eyebrow">Python · Exploratory analysis &amp; statistical profiling</p><h1 id="cs-hero-title" tabindex="-1">See further<br><em>into your data.</em></h1><p>Elessar turns tabular data into a structured, documented statistical assessment.</p><div class="cs-intro-actions"><a href="#five-perspectives" data-show-perspectives="">Explore Elessar<span aria-hidden="true">↘</span></a><a href="guide.html#get-started" data-open-category="get-started"><code>pip install elessar</code><span aria-hidden="true">↗</span></a></div></article>
+<article class="cs-copy-slide" data-intro-slide="1"><p class="fx-eyebrow">From a first inspection to a deeper understanding</p><h2>Understand<br><em>the structure.</em></h2><p>Data quality, distributions, associations and multivariate structure. A deeper exploration, brought together in one Python report.</p><div class="cs-intro-actions"><a href="guide.html#features" data-open-category="features">Explore the features<span aria-hidden="true">↗</span></a></div></article>
+<article class="cs-copy-slide" data-intro-slide="2"><p class="fx-eyebrow">Statistics, explained</p><h2>Follow<br><em>the reasoning.</em></h2><p>Read the methods, assumptions and limitations alongside the findings. Understand what the data can establish.</p><div class="cs-intro-actions"><a href="#five-perspectives" data-show-perspectives="">Discover five perspectives<span aria-hidden="true">↘</span></a></div></article>
+</div></div><div class="cs-progress" aria-hidden="true"><span data-copy-progress=""></span><span data-copy-progress=""></span><span data-copy-progress=""></span></div><p class="cs-progress-note">Scroll to see the bigger picture.</p></div><div class="cs-jewel-anchor" data-intro-anchor="" aria-hidden="true"></div><noscript><a class="cs-no-script" href="guide.html">Read the complete guide ↗</a></noscript><div class="fx-intro"><div><p class="fx-eyebrow">Python · Exploratory analysis &amp; statistical profiling</p><h2 class="cs-five-title">Five perspectives.<br><em>One library.</em></h2></div><p class="fx-intro-copy">Each piece opens a different perspective. Explore the library, its features, its report and the reasoning behind the results.</p></div><div class="fx-stage" data-five-stage=""><a class="fx-piece-hit" data-piece-hit="top-left" data-open-category="discover" href="guide.html#discover" tabindex="-1" aria-hidden="true"></a><a class="fx-piece-hit" data-piece-hit="top-right" data-open-category="features" href="guide.html#features" tabindex="-1" aria-hidden="true"></a><a class="fx-piece-hit" data-piece-hit="core" data-open-category="report" href="guide.html#report" tabindex="-1" aria-hidden="true"></a><a class="fx-piece-hit" data-piece-hit="bottom-left" data-open-category="methodology" href="guide.html#methodology" tabindex="-1" aria-hidden="true"></a><a class="fx-piece-hit" data-piece-hit="bottom-right" data-open-category="get-started" href="guide.html#get-started" tabindex="-1" aria-hidden="true"></a><a class="fx-category" data-open-category="discover" data-piece="top-left" href="guide.html#discover" aria-haspopup="dialog" aria-controls="fx-reader" aria-expanded="false"><span class="fx-category-name">Discover Elessar<span aria-hidden="true">↗</span></span><span class="fx-category-caption">A deeper understanding of your data.</span></a>
+<a class="fx-category" data-open-category="features" data-piece="top-right" href="guide.html#features" aria-haspopup="dialog" aria-controls="fx-reader" aria-expanded="false"><span class="fx-category-name">Features<span aria-hidden="true">↗</span></span><span class="fx-category-caption">From quality checks to statistical structure.</span></a>
+<a class="fx-category" data-open-category="report" data-piece="core" href="guide.html#report" aria-haspopup="dialog" aria-controls="fx-reader" aria-expanded="false"><span class="fx-category-name">The HTML report<span aria-hidden="true">↗</span></span><span class="fx-category-caption">Read. Examine. Share.</span></a>
+<a class="fx-category" data-open-category="methodology" data-piece="bottom-left" href="guide.html#methodology" aria-haspopup="dialog" aria-controls="fx-reader" aria-expanded="false"><span class="fx-category-name">Scientific methodology<span aria-hidden="true">↗</span></span><span class="fx-category-caption">The evidence, assumptions and limitations.</span></a>
+<a class="fx-category" data-open-category="get-started" data-piece="bottom-right" href="guide.html#get-started" aria-haspopup="dialog" aria-controls="fx-reader" aria-expanded="false"><span class="fx-category-name">Get started<span aria-hidden="true">↗</span></span><span class="fx-category-caption">Python, documentation and open development.</span></a></div><div class="fx-first-bottom"><span class="fx-explore-hint">Five perspectives. One library.</span><div class="fx-controls"><button disabled type="button" data-assembly="" aria-pressed="false">Reassemble the gem</button><button type="button" data-motion="" aria-pressed="false">Pause motion</button></div><a href="#outputs">See the outputs ↓</a></div></section></section>
+<section class="fx-screen fx-second" id="outputs" aria-labelledby="fx-outputs-title"><div class="fx-results-heading"><div><p class="fx-eyebrow">Actual report outputs</p><h2 id="fx-outputs-title">Evidence.<em>In plain sight.</em></h2></div><p class="fx-results-intro">Read the statistics, examine the visualisations and follow the reasoning.</p></div><div class="fx-report-gallery"><fieldset class="fx-output-switch">
+          <legend class="fx-sr-only">Choose an Elessar example chart</legend>
+          <input class="fx-choice" type="radio" name="fx-output" id="fx-view-distribution" aria-controls="fx-plot-distribution" checked>
+          <input class="fx-choice" type="radio" name="fx-output" id="fx-view-associations" aria-controls="fx-plot-associations">
+          <input class="fx-choice" type="radio" name="fx-output" id="fx-view-factors" aria-controls="fx-plot-factors">
+          <input class="fx-choice" type="radio" name="fx-output" id="fx-view-selection" aria-controls="fx-plot-selection">
+          <div class="fx-output-tabs"><label class="cursor-interaction" for="fx-view-distribution">Distributions</label><label class="cursor-interaction" for="fx-view-associations">Associations</label><label class="cursor-interaction" for="fx-view-factors">Factor analysis</label><label class="cursor-interaction" for="fx-view-selection">Feature selection</label></div>
+          <div class="fx-output-panels">
+            <figure class="fx-output" id="fx-plot-distribution">
+              <a aria-label="Open this figure at full size" rel="noopener noreferrer" target="_blank" href="assets/outputs/numeric_distribution.png" class="fx-plot-link"><img src="assets/outputs/numeric_distribution.png" width="1779" height="859" alt="Elessar output for Age: histogram with a fitted normal distribution, box plot and Q–Q plot. The figure reports 714 non-missing values and a non-normal distribution."></a>
+              <figcaption class="fx-caption"><div class="fx-figure-label">UNIVARIATE ANALYSIS / VARIABLE: AGE</div><div><h3>Describe, fit, then challenge.</h3><p>Read the histogram, fitted distribution, box plot and Q–Q plot together. Here, the shape is described as roughly symmetric, while the diagnostic flags non-normality.</p><a class="fx-source" href="https://github.com/Thibautdqb/elessar/blob/2262600bc335e535297bfc64b05b646e6172590f/docs/numeric_distribution.png" target="_blank" rel="noopener noreferrer">SOURCE / FULL SIZE ↗</a></div></figcaption>
+            </figure>
+            <figure class="fx-output" id="fx-plot-associations">
+              <a aria-label="Open this figure at full size" rel="noopener noreferrer" target="_blank" href="assets/outputs/association_heatmap.png" class="fx-plot-link"><img class="fx-square-plot" src="assets/outputs/association_heatmap.png" width="1188" height="1118" alt="Elessar association matrix for eight columns, combining Spearman, Cramér’s V and eta. Cells that are not significant after Benjamini–Hochberg correction are dimmed."></a>
+              <figcaption class="fx-caption"><div class="fx-figure-label">ASSOCIATIONS / MIXED VARIABLE TYPES</div><div><h3>The right measure for each relationship.</h3><p>Spearman for numeric pairs, Cramér’s V for categorical pairs, eta between types. Dimmed cells mark associations that are not significant after Benjamini–Hochberg correction at a 0.05 threshold.</p><a class="fx-source" href="https://github.com/Thibautdqb/elessar/blob/2262600bc335e535297bfc64b05b646e6172590f/docs/association_heatmap.png" target="_blank" rel="noopener noreferrer">SOURCE / FULL SIZE ↗</a></div></figcaption>
+            </figure>
+            <figure class="fx-output" id="fx-plot-factors">
+              <a aria-label="Open this figure at full size" rel="noopener noreferrer" target="_blank" href="assets/outputs/factor_analysis.png" class="fx-plot-link"><img src="assets/outputs/factor_analysis.png" width="1923" height="1504" alt="Elessar factor analysis: scree plot, cumulative variance, comparison with random data and varimax-rotated loading matrix. Five factors are retained in this example."></a>
+              <figcaption class="fx-caption"><div class="fx-figure-label">MULTIVARIATE STRUCTURE / FACTOR ANALYSIS</div><div><h3>Put the structure to the test.</h3><p>The scree plot and parallel analysis inform the choice of dimensions. Rotated loadings make the structure readable; KMO, Bartlett’s test and Cronbach’s alphas help assess the solution.</p><a class="fx-source" href="https://github.com/Thibautdqb/elessar/blob/2262600bc335e535297bfc64b05b646e6172590f/docs/factor_analysis.png" target="_blank" rel="noopener noreferrer">SOURCE / FULL SIZE ↗</a></div></figcaption>
+            </figure>
+            <figure class="fx-output" id="fx-plot-selection">
+              <a aria-label="Open this figure at full size" rel="noopener noreferrer" target="_blank" href="assets/outputs/feature_selection.png" class="fx-plot-link"><img src="assets/outputs/feature_selection.png" width="1779" height="770" alt="Elessar feature selection for Survived on 891 observations: decision tree, random forest, lasso, ridge and filter comparisons, with holdout scores and selection votes."></a>
+              <figcaption class="fx-caption"><div class="fx-figure-label">FEATURE SELECTION / TARGET: SURVIVED</div><div><h3>Compare the methods and their choices.</h3><p>Compare feature importance across several methods. Holdout scores appear at the top; selection votes summarise the variables retained in this example, without turning them into a universal rule.</p><a class="fx-source" href="https://github.com/Thibautdqb/elessar/blob/2262600bc335e535297bfc64b05b646e6172590f/docs/feature_selection.png" target="_blank" rel="noopener noreferrer">SOURCE / FULL SIZE ↗</a></div></figcaption>
+            </figure>
+          </div>
+        </fieldset>
+        
+<p class="fx-provenance">Demonstration figures from the Elessar repository, version 1.1.0. They come from separate examples and are reproduced with their original results. Interpret associations in context.</p>
+      </div><footer class="fx-footer"><div class="fx-footer-common"><p>Elessar — Automated exploratory data analysis and statistical profiling.</p>
+<p>An open-source Python library for understanding data, examining relationships and preparing more reliable analyses.</p>
+<p><a href="https://github.com/Thibautdqb/elessar#api" target="_blank" rel="noopener noreferrer">Documentation</a> · <a href="https://github.com/Thibautdqb/elessar" target="_blank" rel="noopener noreferrer">GitHub</a> · <a href="https://pypi.org/project/elessar/" target="_blank" rel="noopener noreferrer">PyPI</a> · <a href="https://github.com/Thibautdqb/elessar/releases" target="_blank" rel="noopener noreferrer">Release notes</a> · <a href="guide.html#methodology">Scientific methodology</a> · <a href="https://github.com/Thibautdqb/elessar#license" target="_blank" rel="noopener noreferrer">MIT licence</a></p>
+<p>Statistical results depend on the data, methods and their assumptions. Automated diagnostics are intended to inform analysis, alongside validation appropriate to the context.</p></div><div class="fx-footer-brand">elessar<span>.</span></div><div data-assembly-end="" class="fx-endstone" aria-hidden="true"></div><div class="fx-footer-meta"><span>Exploratory analysis. With the reasoning in view.</span><span>PYTHON ≥ 3.10 · MIT</span><a href="guide.html#get-started">Start your analysis ↑</a></div></footer></section></main>
+<dialog class="fx-reader" id="fx-reader" aria-modal="true" aria-labelledby="fx-reader-title"><div class="fx-reader-shell"><div class="fx-reader-top"><span class="fx-wordmark">elessar<b>.</b></span><span class="fx-reader-title" id="fx-reader-title" data-reader-title="">Discover Elessar</span><button class="fx-reader-close" type="button" data-reader-close="">Close<span aria-hidden="true">×</span></button></div><div class="fx-reader-body"><aside class="fx-reader-side"><nav aria-label="All five categories"><a href="guide.html#discover" data-reader-category="discover">Discover Elessar</a><a href="guide.html#features" data-reader-category="features">Features</a><a href="guide.html#report" data-reader-category="report">The HTML report</a><a href="guide.html#methodology" data-reader-category="methodology">Scientific methodology</a><a href="guide.html#get-started" data-reader-category="get-started">Get started</a></nav><div class="fx-reader-extra"><span>PYTHON ≥ 3.10 · MIT</span><a href="https://github.com/Thibautdqb/elessar" target="_blank" rel="noopener noreferrer">View the source ↗</a><a href="guide.html" target="_blank" rel="noopener noreferrer">Read the complete guide ↗</a></div></aside><div class="fx-reader-scroll" data-reader-scroll=""><article id="fx-article-discover" data-category-content="discover"><div class="fx-reader-intro">Discover Elessar</div><nav class="fx-reader-toc" aria-label="In this category"><a href="#explore-your-data-understand-its-structure-make-better-decisions">Explore your data. Understand its structure. Make better decisions.</a><a href="#use-cases">Use cases</a><a href="#about-elessar">About Elessar</a></nav><h2 id="explore-your-data-understand-its-structure-make-better-decisions" tabindex="-1">Explore your data. Understand its structure. Make better decisions.</h2>
+<p>Exploratory analysis should go beyond a handful of descriptive statistics and automatically generated charts.</p>
+<p>Elessar is a Python library for exploratory data analysis and statistical profiling. It turns tabular data into a structured, documented and actionable assessment.</p>
+<p>In a single call, Elessar examines variable types, data quality, distributions, statistical associations, unusual observations and multivariate structure. When a target is specified, it also examines potentially predictive variables.</p>
+<p>The result is a comprehensive HTML report, visualisations and data preparation recommendations accompanied by Python code.</p>
+<p>Explore in depth, without multiplying scripts.</p>
+<p><a href="guide.html#features">Discover Elessar</a>. <a href="https://github.com/Thibautdqb/elessar" target="_blank" rel="noopener noreferrer">View the project on GitHub</a>. <a href="guide.html#get-started">Get started with Python</a>.</p>
+<h3 id="a-rigorous-approach-to-statistics" tabindex="-1">A rigorous approach to statistics</h3>
+<p>Elessar aims to make numbers interpretable, as well as produce them.</p>
+<p>Methods are selected according to the nature of the data. Statistical assumptions, the limitations of tests and situations in which a conclusion remains uncertain are explicitly documented.</p>
+<p>A strong association does not automatically imply causation. A highly predictive variable is not necessarily data leakage. And the highest-ranked distribution is not necessarily the true distribution.</p>
+<p>Elessar keeps these distinctions at the heart of its analysis.</p>
+<h3 id="from-a-first-inspection-to-a-deeper-understanding" tabindex="-1">From a first inspection to a deeper understanding</h3>
+<ul><li>Detect data quality issues.</li><li>Explore relationships between variables.</li><li>Examine distributions and unusual observations.</li><li>Identify redundant dimensions.</li><li>Analyse your time series.</li><li>Prepare variables for the next steps.</li></ul>
+<p>All within a familiar Python environment, with a report designed to be read and shared.</p>
+<p>Your data deserves more than a summary.</p>
+<h2 id="use-cases" tabindex="-1">Use cases</h2>
+<h3 id="from-a-quick-inspection-to-an-in-depth-analysis" tabindex="-1">From a quick inspection to an in-depth analysis</h3>
+<p>Elessar supports different stages of working with data.</p>
+<h3 id="data-science-and-machine-learning" tabindex="-1">Data science and machine learning</h3>
+<p>Before training a model, you need to understand the available variables, their quality, their relationships and the risks of contamination.</p>
+<p>Elessar supports this investigation by identifying promising variables, redundancies, missing values and possible transformations.</p>
+<p>It helps prepare a suitable modelling protocol; it does not replace one.</p>
+<h3 id="research-and-statistical-analysis" tabindex="-1">Research and statistical analysis</h3>
+<p>Researchers and analysts can examine distributions, associations, multivariate structure and time series within the same tool.</p>
+<p>Results retain their methodological assumptions, making them easier to check and discuss.</p>
+<h3 id="financial-data-analysis" tabindex="-1">Financial data analysis</h3>
+<p>Financial data often exhibits skewed distributions, extreme observations, temporal dependencies and unstable relationships.</p>
+<p>Elessar can support an initial exploration of these characteristics, help identify redundancies and examine the statistical structure of time series.</p>
+<p>These results are neither validated trading signals nor guarantees of predictive performance.</p>
+<h3 id="data-quality-and-preparation" tabindex="-1">Data quality and preparation</h3>
+<p>When a file comes from an external source, its types, conventions and formats are not always reliable.</p>
+<p>Elessar helps identify inconsistencies and establish a reasoned list of possible transformations before the data is used in production.</p>
+<h3 id="exploring-unfamiliar-datasets" tabindex="-1">Exploring unfamiliar datasets</h3>
+<p>For a new CSV, Parquet or Excel file, Elessar quickly provides a structured overview.</p>
+<p>You have a foundation for exploration that can be developed according to your project's needs, instead of starting from scratch.</p>
+<h2 id="about-elessar" tabindex="-1">About Elessar</h2>
+<p>Elessar grew from a simple idea: exploratory analysis deserves the same rigour as the models that follow it.</p>
+<p>In many projects, data exploration remains a sequence of separate commands, charts and tests.</p>
+<p>This approach often leaves important questions unanswered. Why was a variable interpreted as numeric? Why was this test selected? Are its assumptions appropriate? Is a high correlation credible? Could a transformation contaminate a future evaluation?</p>
+<p>Elessar brings these questions into a single analysis process.</p>
+<p>The project combines automation, statistics, visualisation and methodological transparency so users can spend more time interpreting their data.</p>
+<p>Its ambition is to examine varied datasets with depth and rigour, while keeping the limits of what the data can actually establish in view.</p>
+<p>Elessar is not intended to replace the judgement of a statistician or data scientist.</p>
+<p>It gives them better tools to explore, verify and understand.</p>
+<p>Elessar — See further into your data.</p></article>
+<article id="fx-article-features" data-category-content="features" hidden><div class="fx-reader-intro">Features</div><h2 id="complete-statistical-exploration-in-one-tool" tabindex="-1">Complete statistical exploration in one tool</h2>
+<p>Elessar brings together families of analyses that are often spread across separate scripts, libraries and notebooks.</p>
+<h3 id="automatic-understanding-of-variables" tabindex="-1">Automatic understanding of variables</h3>
+<p>Technical data types do not always reveal the true nature of a variable.</p>
+<p>An integer may represent an amount, an identifier or a category code. A string may contain a date, an email address, an ordinal scale or a poorly formatted number.</p>
+<p>Elessar examines column contents and characteristics to suggest suitable semantic types, with explanations and confidence indicators.</p>
+<h3 id="data-quality" tabindex="-1">Data quality</h3>
+<p>Formatting errors, missing values, duplicates, inconsistencies and unexpected values can substantially change the conclusions of an analysis.</p>
+<p>Elessar identifies these issues, prioritises them and suggests checks or corrections.</p>
+<p>The recommendations remain explicit: an unusual value is not automatically an error.</p>
+<h3 id="descriptive-statistics-and-distributions" tabindex="-1">Descriptive statistics and distributions</h3>
+<p>Elessar produces measures suited to the variable types: central tendency, dispersion, quantiles, skewness, concentration, frequent values and other relevant characteristics.</p>
+<p>For eligible numeric variables, it compares distribution families using criteria such as AIC, examines discrepancies in fit and provides normality diagnostics.</p>
+<p>The aim is to understand the observed shape of the data, rather than impose a theoretical distribution.</p>
+<h3 id="associations-between-variables" tabindex="-1">Associations between variables</h3>
+<p>Elessar examines numeric, categorical and mixed relationships with appropriate measures, including Pearson, Spearman, Kendall, Cramér's V, the correlation ratio, mutual information and AUC, depending on the context.</p>
+<p>Where the assumptions allow, these measures are accompanied by statistical tests, multiple-comparison adjustments or confidence intervals.</p>
+<p>Approximate or unavailable inferential results are distinguished from descriptive results.</p>
+<h3 id="supervised-analysis-and-feature-selection" tabindex="-1">Supervised analysis and feature selection</h3>
+<p>When a target variable is specified, Elessar examines its associations with predictors and compares several selection methods.</p>
+<p>Decision trees, random forests, L1 and L2 regularisation and statistical filters contribute to a feature consensus.</p>
+<p>Shuffled reference variables, known as shadow features, help contextualise certain importance measures.</p>
+<p>Version 1.2 adds a final evaluation independent of the consensus-building process, separating feature selection from its assessment on held-out observations. This version is still in preparation; its features will become publicly available after the official release.</p>
+<h3 id="multivariate-analysis" tabindex="-1">Multivariate analysis</h3>
+<p>Elessar looks for redundancy between variables and examines whether dimensionality reduction may be useful.</p>
+<p>It provides principal component analysis and exploratory component extraction with varimax rotation, together with diagnostics such as KMO, Bartlett's test, parallel analysis and internal consistency.</p>
+<p>These results help explain shared structure. They do not automatically establish the existence of latent constructs.</p>
+<h3 id="unusual-observations" tabindex="-1">Unusual observations</h3>
+<p>An extreme value may be an anomaly, a rare but legitimate observation or a particularly interesting event.</p>
+<p>Elessar combines detection criteria and distinguishes statistical flagging from the decision to clean the data.</p>
+<p>The report helps examine the observations concerned, rather than remove them without justification.</p>
+<h3 id="time-series" tabindex="-1">Time series</h3>
+<p>For data with an identifiable temporal structure, Elessar examines trends, autocorrelation, seasonality and stationarity, among other characteristics.</p>
+<p>When the required conditions are met, inferential methods account for temporal dependence.</p>
+<p>The limitations of the approximations used are documented.</p>
+<h3 id="a-data-preparation-plan" tabindex="-1">A data preparation plan</h3>
+<p>At the end of an analysis, Elessar proposes a data preparation plan.</p>
+<p>Cleaning, transformations, encoding, grouping and other operations are accompanied by explanations and code examples.</p>
+<p>For predictive modelling, learned transformations must be fitted only on the training data to avoid contamination between datasets.</p></article>
+<article id="fx-article-report" data-category-content="report" hidden><div class="fx-reader-intro">The HTML report</div><h2 id="your-data-brought-together-in-a-report" tabindex="-1">Your data, brought together in a report</h2>
+<p>Elessar returns more than Python objects.</p>
+<p>It produces a navigable HTML report that brings exploration results, visualisations, alerts and recommendations into a coherent interface.</p>
+<h3 id="an-immediate-overview" tabindex="-1">An immediate overview</h3>
+<p>The report starts with the essentials: dataset dimensions, variable types, the proportion of missing values, important alerts and principal findings.</p>
+<p>You can quickly identify areas that need further investigation.</p>
+<h3 id="structured-navigation" tabindex="-1">Structured navigation</h3>
+<p>Analyses are organised into sections: overview, target, feature selection, distributions, unusual observations, data quality, multivariate statistics, time series and preparation.</p>
+<p>Each variable also has its own detailed analysis.</p>
+<h3 id="charts-that-support-interpretation" tabindex="-1">Charts that support interpretation</h3>
+<p>Histograms, distribution fits, quantile–quantile plots, association matrices, PCA visualisations, time-series charts and outlier visualisations let you examine results from several perspectives.</p>
+<p>Visualisations are linked to the corresponding statistics to preserve the context needed for interpretation.</p>
+<h3 id="findings-you-can-examine" tabindex="-1">Findings you can examine</h3>
+<p>A statistical result should be understandable and placed in its methodological context.</p>
+<p>Elessar identifies the methods used and distinguishes descriptive measures from inferential conclusions.</p>
+<p>When a result depends on assumptions or an approximation, that distinction forms part of its interpretation.</p>
+<h3 id="recommendations-with-code" tabindex="-1">Recommendations with code</h3>
+<p>The report includes data preparation suggestions with Python examples.</p>
+<p>These examples provide a reproducible, reviewable starting point. They do not require automatic transformation.</p>
+<h3 id="a-portable-report" tabindex="-1">A portable report</h3>
+<p>The report can be viewed locally in a browser. Elessar can also generate a self-contained HTML version with its charts embedded.</p>
+<p>Results remain accessible through the Python API for further processing.</p>
+<p>An analysis you can read, examine and share.</p>
+<p><a href="index.html#outputs">Explore actual report outputs</a>.</p></article>
+<article id="fx-article-methodology" data-category-content="methodology" hidden><div class="fx-reader-intro">Scientific methodology</div><h2 id="statistical-rigour-as-a-design-principle" tabindex="-1">Statistical rigour as a design principle</h2>
+<p>Automated analysis is useful only when its results can be understood.</p>
+<p>Elessar is developed around a principle: every statistical method has assumptions, a domain of application and limitations.</p>
+<p>The goal is to choose appropriate methods, rather than apply the same tests uniformly to every dataset.</p>
+<h3 id="a-measurement-is-not-a-conclusion" tabindex="-1">A measurement is not a conclusion</h3>
+<p>A correlation measures an association, not causation.</p>
+<p>A p-value depends on the test and its assumptions.</p>
+<p>A confidence interval can be interpreted only within an appropriate sampling framework.</p>
+<p>And a non-significant result does not establish the absence of a relationship.</p>
+<p>Elessar preserves these distinctions in its scientific documentation and in the presentation of results.</p>
+<h3 id="accounting-for-dependencies" tabindex="-1">Accounting for dependencies</h3>
+<p>Observations are not always independent.</p>
+<p>Time series, panel data and repeated measurements need particular attention: ignoring their structure can lead to overly optimistic conclusions.</p>
+<p>Elessar incorporates specific methods for certain temporal structures, while identifying approximations and the conditions still required for their validity.</p>
+<h3 id="limiting-spurious-conclusions" tabindex="-1">Limiting spurious conclusions</h3>
+<p>Testing many relationships increases the risk of false positives.</p>
+<p>Elessar applies multiplicity adjustments within the relevant test families and distinguishes adjusted results from raw measures.</p>
+<p>These adjustments are not presented as a universal guarantee when their assumptions have not been established.</p>
+<h3 id="preventing-data-leakage" tabindex="-1">Preventing data leakage</h3>
+<p>Excellent predictive performance is not always good news.</p>
+<p>It may reflect a legitimate signal, or information that would not have been available at prediction time.</p>
+<p>Elessar flags suspicious associations, supports explicit exclusion of variables whose provenance is known and applies a configurable quarantine policy for exact aliases of the target.</p>
+<p>A strong association alone is insufficient to establish leakage.</p>
+<p>In its selection procedure, v1.2 also reserves an independent final set to evaluate the consensus after the selected features have been fixed. This version remains in preparation.</p>
+<h3 id="testing-methods-as-well-as-execution" tabindex="-1">Testing methods, as well as execution</h3>
+<p>Elessar's scientific validation goes beyond checking that functions run.</p>
+<p>The project includes tests on synthetic datasets with known properties, comparisons with reference implementations and simulations examining false positives, statistical power and numerical stability, among other aspects.</p>
+<p>These validations characterise defined domains of application. They do not provide a guarantee for every possible distribution or data-generating process.</p>
+<p>A scientific library should make its evidence as visible as its limitations.</p>
+<p><a href="https://github.com/Thibautdqb/elessar" target="_blank" rel="noopener noreferrer">Read the scientific contract and validation results in the GitHub repository</a>.</p></article>
+<article id="fx-article-get-started" data-category-content="get-started" hidden><div class="fx-reader-intro">Get started</div><nav class="fx-reader-toc" aria-label="In this category"><a href="#installation-and-first-steps">Installation and first steps</a><a href="#open-source-and-development">Open source and development</a><a href="#frequently-asked-questions">Frequently asked questions</a><a href="#releases-and-roadmap">Releases and roadmap</a></nav><h2 id="installation-and-first-steps" tabindex="-1">Installation and first steps</h2>
+<h3 id="start-exploring-your-data-with-python" tabindex="-1">Start exploring your data with Python</h3>
+<p>Elessar is an open-source Python library, available on PyPI and developed publicly on GitHub.</p>
+<p>Install the standard package with:</p>
+<pre><code class="language-sh">pip install elessar</code></pre>
+<button class="fx-copy-command" type="button" data-copy-install="">Copy command</button>
+<p>Elessar requires Python 3.10 or later.</p>
+<p>Run your first analysis:</p>
+<pre><code class="language-python">import elessar
+
+report = elessar.see("data.csv")</code></pre>
+<p>To analyse a target variable:</p>
+<pre><code class="language-python">report = elessar.see("data.csv", target="target")</code></pre>
+<p>Elessar also works with pandas DataFrames and several other supported tabular representations.</p>
+<p>Once exploration is complete, results can be inspected in the terminal, through the Python API and in the generated HTML report.</p>
+<p>Analyses can be customised with StoneConfig, including control over methods and computation parameters.</p>
+<p>Version 1.2 is being finalised and validated. Features described for this version will become publicly available after its official release.</p>
+<p>For the API, parameters and detailed examples, see the technical documentation on GitHub.</p>
+<p><a href="https://pypi.org/project/elessar/" target="_blank" rel="noopener noreferrer">Install Elessar</a>. <a href="https://github.com/Thibautdqb/elessar#api" target="_blank" rel="noopener noreferrer">Read the documentation</a>. <a href="https://github.com/Thibautdqb/elessar" target="_blank" rel="noopener noreferrer">Explore the source code</a>.</p>
+<h2 id="open-source-and-development" tabindex="-1">Open source and development</h2>
+<h3 id="open-inspectable-and-evolving" tabindex="-1">Open, inspectable and evolving</h3>
+<p>Elessar is developed as an open-source Python project under the MIT licence.</p>
+<p>Its code, tests, validation workflows and methodological documents are publicly accessible.</p>
+<p>This transparency lets you examine the statistical choices behind the features, as well as the features themselves.</p>
+<h3 id="development-guided-by-tests" tabindex="-1">Development guided by tests</h3>
+<p>Each new version aims to improve methodological robustness, consistency of results and compatibility with the Python ecosystem.</p>
+<p>Version 1.2 strengthens the isolation of the final evaluation, statistical diagnostics for dependent data, the calibration of certain methods and the precision of report explanations.</p>
+<p>Larger changes to the inference engine will undergo dedicated development and validation.</p>
+<h3 id="contributing-to-the-project" tabindex="-1">Contributing to the project</h3>
+<p>User feedback, bug reports, proposed tests and code contributions are welcome.</p>
+<p>A statistical improvement should include a methodological justification and tests that characterise its behaviour.</p>
+<p>The GitHub repository is the reference point for following development and contributing to the project.</p>
+<p><a href="https://github.com/Thibautdqb/elessar" target="_blank" rel="noopener noreferrer">GitHub — Thibautdqb/elessar</a>.</p>
+<h2 id="frequently-asked-questions" tabindex="-1">Frequently asked questions</h2>
+<h3 id="is-elessar-free" tabindex="-1">Is Elessar free?</h3>
+<p>Yes. Elessar is an open-source project distributed under the MIT licence.</p>
+<h3 id="is-my-data-sent-to-a-remote-service" tabindex="-1">Is my data sent to a remote service?</h3>
+<p>Analysis runs in your Python environment. Elessar does not require a cloud service to produce statistics and local reports. How your data is processed depends on the environment and sources you use.</p>
+<h3 id="do-i-need-to-specify-a-target-variable" tabindex="-1">Do I need to specify a target variable?</h3>
+<p>No. Elessar can perform unsupervised exploration. When a target is supplied, it adds the appropriate analyses and selection methods.</p>
+<h3 id="does-elessar-replace-pandas-scipy-or-scikit-learn" tabindex="-1">Does Elessar replace pandas, SciPy or scikit-learn?</h3>
+<p>No. It builds on the scientific Python ecosystem to orchestrate analyses, provide consistent diagnostics and produce an integrated report.</p>
+<h3 id="can-elessar-automatically-detect-every-instance-of-data-leakage" tabindex="-1">Can Elessar automatically detect every instance of data leakage?</h3>
+<p>No. It can identify certain target aliases, flag suspicious associations and apply configured exclusions. Establishing whether a variable was actually available at prediction time may require business or temporal information that is absent from the dataset.</p>
+<h3 id="are-p-values-always-available" tabindex="-1">Are p-values always available?</h3>
+<p>No. Some situations do not permit reliable inference without additional assumptions. Elessar distinguishes descriptive results from conditional, approximate or unavailable tests.</p>
+<h3 id="is-the-highest-ranked-distribution-necessarily-the-true-distribution" tabindex="-1">Is the highest-ranked distribution necessarily the true distribution?</h3>
+<p>No. AIC rankings compare fitted candidate families. They do not establish that any candidate exactly represents the data-generating process.</p>
+<h3 id="does-elessar-clean-the-data-automatically" tabindex="-1">Does Elessar clean the data automatically?</h3>
+<p>Elessar provides diagnostics and data preparation recommendations with code. Corrections need to be reviewed in context, particularly for unusual observations or supervised transformations.</p>
+<h3 id="can-elessar-work-with-large-files" tabindex="-1">Can Elessar work with large files?</h3>
+<p>Elessar provides mechanisms for progressive reading and large-data processing for supported formats. Practical limits depend on the source, available resources and requested operations.</p>
+<h3 id="does-elessar-guarantee-good-machine-learning-models" tabindex="-1">Does Elessar guarantee good machine learning models?</h3>
+<p>No. Elessar helps you understand and prepare data and provides exploratory evaluations. A model's production performance also depends on the problem, validation protocol and changes in the data.</p>
+<h3 id="what-is-the-difference-between-v1-1-and-v1-2" tabindex="-1">What is the difference between v1.1 and v1.2?</h3>
+<p>Version 1.2 aims to strengthen the scientific consistency of analyses, certain inferential methods and the independent evaluation of feature selection. Final details will be confirmed in the official release notes.</p>
+<h2 id="releases-and-roadmap" tabindex="-1">Releases and roadmap</h2>
+<p>Elessar evolves with a consistent priority: improve statistical reliability without sacrificing practical usefulness.</p>
+<h3 id="version-1-1-released" tabindex="-1">Version 1.1 — Released</h3>
+<p>An exploratory analysis library integrating descriptive statistics, quality diagnostics, distribution analysis, associations, multivariate methods, time series and report generation.</p>
+<h3 id="version-1-2-in-preparation" tabindex="-1">Version 1.2 — In preparation</h3>
+<p>An update focused on statistical robustness, preventing contamination during supervised selection, numerical validation and consistency between code, documentation and displayed results.</p>
+<p>It will be published after the release checks have been validated.</p>
+<h3 id="looking-ahead" tabindex="-1">Looking ahead</h3>
+<p>Future development will explore adapting inference methods to data structures, statistical calibration through simulation, variable-provenance diagnostics and more advanced measures of uncertainty.</p>
+<p>These are development goals, not features already available.</p>
+<p><a href="https://github.com/Thibautdqb/elessar/releases" target="_blank" rel="noopener noreferrer">Follow development and release notes on GitHub</a>.</p></article></div></div></div></dialog></div><script>(()=>{var g=[{key:"discover",piece:"top-left",title:"Discover Elessar",caption:"A deeper understanding of your data.",pages:["Introduction","Use cases","About Elessar"]},{key:"features",piece:"top-right",title:"Features",caption:"From quality checks to statistical structure.",pages:["Features"]},{key:"report",piece:"core",title:"The HTML report",caption:"Read. Examine. Share.",pages:["The HTML report"]},{key:"methodology",piece:"bottom-left",title:"Scientific methodology",caption:"The evidence, assumptions and limitations.",pages:["Scientific methodology"]},{key:"get-started",piece:"bottom-right",title:"Get started",caption:"Python, documentation and open development.",pages:["Installation","Open source","Frequently asked questions","Releases and roadmap"]}],d=(t,s=0,c=1)=>Math.max(s,Math.min(c,Number.isFinite(t)?t:0)),h=t=>(t=d(t),t*t*t*(t*(t*6-15)+10));function F(t=0,s=0){let c=d(t);return{progress:c,text:d(c/.52),turn:Math.PI*2*h(c/.54),autoWeight:1-h((c-.44)/.16),centre:h((c-.62)/.15),split:h((c-.78)/.14),reveal:h((c-.84)/.1),intro:1-h((c-.55)/.1),join:h(s)}}var P=document.getElementById("elessar-constellation");P&&U(P);function U(t){let s=t.querySelector("#fx-reader"),c=t.querySelector("[data-reader-scroll]"),B=[...t.querySelectorAll("[data-category-content]")],E=[...t.querySelectorAll("[data-open-category]")],v=matchMedia("(prefers-reduced-motion: reduce)"),x=t.querySelector("[data-motion]"),S=t.querySelector("[data-assembly]"),T=t.querySelector("[data-live]"),z=null,R="",b=!1,m=!1,q=!1,M=!1,l=(e,r={})=>t.dispatchEvent(new CustomEvent(`constellation:${e}`,{detail:r})),f=()=>!b&&!v.matches;t.dataset.enhanced="true";let D=t.querySelector("[data-journey]"),K=t.querySelector("[data-pin]"),j=t.querySelector("[data-five-stage]"),C=t.querySelector("[data-intro-copy]"),$=t.querySelector("[data-intro-track]"),G=[...t.querySelectorAll("[data-intro-slide]")];function H(){let e=window.scrollY||0,r=D.getBoundingClientRect(),i=r.top+e,a=Math.max(1,r.height-K.getBoundingClientRect().height),o=Math.max(1,document.documentElement.scrollHeight-window.innerHeight);return{y:e,start:i,span:a,max:o}}function W(){q=!1;let e=H(),r=d((e.y-e.start)/e.span),i=d((e.y-e.start-e.span)/Math.max(1,e.max-e.start-e.span)),a=F(r,i),o=a.reveal>.999;t.dataset.story=String(r),t.dataset.join=String(i),t.dataset.categoriesReady=String(o),t.style.setProperty("--cs-reveal",String(a.reveal)),t.style.setProperty("--cs-category-visible",a.reveal>0?"visible":"hidden"),C.style.opacity=String(a.intro),C.style.visibility=a.intro>0?"visible":"hidden",C.inert=a.intro<.05,$.style.transform=`translate3d(${-a.text*200}%,0,0)`;let u=Math.round(a.text*2);G.forEach((n,w)=>{n.inert=w!==u,n.setAttribute("aria-hidden",String(w!==u))}),t.querySelectorAll("[data-copy-progress]").forEach((n,w)=>n.style.setProperty("--fill",String(d(a.text*3-w)))),j.inert=!o,j.setAttribute("aria-hidden",String(!o)),S.disabled=!o,t.querySelector(".fx-explore-hint").textContent=o?"Five perspectives. One library.":"Scroll to explore",l("progress",{story:r,join:i})}function y(){q||(q=!0,requestAnimationFrame(W))}function I({writeHash:e=!0}={}){p({restore:!1,writeHash:!1});let r=H();window.scrollTo({top:r.start+r.span*.97,behavior:f()?"smooth":"auto"}),e&&location.hash!=="#five-perspectives"&&history.pushState(null,"","#five-perspectives"),y()}function p({restore:e=!0,writeHash:r=!0}={}){s.open&&(typeof s.close=="function"?s.close():s.removeAttribute("open"),document.body.style.overflow=R,M&&(t.querySelector("main").inert=!1,t.querySelector("header").inert=!1,M=!1),E.forEach(i=>i.setAttribute("aria-expanded","false")),r&&location.hash&&location.hash!=="#outputs"&&history.pushState(null,"",location.pathname+location.search),e&&z?.focus({preventScroll:!0}),t.dataset.readerOpen="false",l("reader",{open:!1}))}function A(e,{writeHash:r=!0,section:i=null}={}){let a=g.find(n=>n.key===e);if(!a)return!1;let o=s.open;o||(z=document.activeElement,R=document.body.style.overflow),B.forEach(n=>n.hidden=n.dataset.categoryContent!==e),t.querySelector("[data-reader-title]").textContent=a.title,t.querySelectorAll("[data-reader-category]").forEach(n=>{n.dataset.readerCategory===e?n.setAttribute("aria-current","page"):n.removeAttribute("aria-current")}),E.forEach(n=>n.setAttribute("aria-expanded",String(n.dataset.openCategory===e))),o||(typeof s.showModal=="function"?s.showModal():(s.setAttribute("open",""),t.querySelector("main").inert=!0,t.querySelector("header").inert=!0,M=!0)),document.body.style.overflow="hidden",c.scrollTop=0;let u=i?t.querySelector(`#${i}`):t.querySelector(`[data-category-content="${e}"] h2`);return i&&u&&(c.scrollTop=Math.max(0,u.getBoundingClientRect().top-c.getBoundingClientRect().top-25)),(u||t.querySelector("[data-reader-close]")).focus({preventScroll:!0}),r&&history.pushState(null,"",`#${i||e}`),t.dataset.readerOpen="true",l("reader",{open:!0}),l("focus",{piece:a.piece}),!0}function O(e){if(p({restore:!1,writeHash:!1}),e){let r=t.querySelector(`#fx-view-${e}`);r&&(r.checked=!0)}location.hash!=="#outputs"&&history.pushState(null,"","#outputs"),t.querySelector("#outputs").scrollIntoView({block:"start",behavior:f()?"smooth":"auto"}),y()}function N(e){if(e.dataset.openCategory)return{category:e.dataset.openCategory};let r=e.getAttribute("href")||"";if(e.hasAttribute("data-show-perspectives")||r==="#five-perspectives")return{perspectives:!0};if(r==="index.html#outputs"||r==="#outputs")return{outputs:!0};let i=r.startsWith("guide.html#")?r.slice(11):r.startsWith("#")?r.slice(1):"";if(g.some(u=>u.key===i))return{category:i};let a=i?document.getElementById(i):null,o=a?.closest("[data-category-content]")?a:null;return o?{category:o.closest("[data-category-content]").dataset.categoryContent,section:i}:null}t.querySelectorAll("a[href]").forEach(e=>e.addEventListener("click",r=>{if(r.button!==0||r.metaKey||r.ctrlKey||r.altKey||r.shiftKey)return;let i=N(e);i&&(r.preventDefault(),i.perspectives?I():i.outputs?O(e.dataset.output):A(i.category,{section:i.section}))})),t.querySelector("[data-reader-close]").addEventListener("click",()=>p()),s.addEventListener("cancel",e=>{e.preventDefault(),p()}),s.addEventListener("click",e=>{e.target===s&&p()}),s.addEventListener("keydown",e=>{if(e.key==="Escape"){e.preventDefault(),p();return}if(e.key!=="Tab")return;let r=[...s.querySelectorAll('a[href],button,[tabindex="0"]')].filter(o=>!o.closest("[hidden]")),i=r[0],a=r.at(-1);e.shiftKey&&document.activeElement===i?(e.preventDefault(),a.focus()):!e.shiftKey&&document.activeElement===a&&(e.preventDefault(),i.focus())});for(let e of E){let r=()=>l("focus",{piece:g.find(i=>i.key===e.dataset.openCategory)?.piece});e.addEventListener("pointerenter",r),e.addEventListener("focus",r),e.addEventListener("pointerleave",()=>l("focus",{piece:null})),e.addEventListener("blur",()=>l("focus",{piece:null}))}S.addEventListener("click",()=>{m=!m,S.firstChild.textContent=m?"Separate the pieces":"Reassemble the gem",S.setAttribute("aria-pressed",String(m)),l("assembly",{assembled:m})});function L(){t.dataset.motion=f()?"on":"off",x.textContent=v.matches?"Reduced motion":b?"Resume motion":"Pause motion",x.disabled=v.matches,x.setAttribute("aria-pressed",String(!f())),l("motion",{allowed:f()})}x.addEventListener("click",()=>{b=!b,L()}),v.addEventListener("change",L),t.querySelectorAll("[data-copy-install]").forEach(e=>e.addEventListener("click",async()=>{try{if(!navigator.clipboard?.writeText)throw Error("Clipboard unavailable");await navigator.clipboard.writeText("pip install elessar"),e.textContent="Copied",T.textContent="Install command copied.",setTimeout(()=>e.textContent="Copy command",1800)}catch{T.textContent="Copy this command: pip install elessar",e.textContent="pip install elessar"}})),t.querySelector("[data-top]").addEventListener("click",e=>{e.preventDefault(),window.scrollTo({top:0,behavior:f()?"smooth":"auto"}),location.hash&&history.pushState(null,"",location.pathname+location.search),t.querySelector("h1").focus({preventScroll:!0})});function k(){let e=location.hash.slice(1);if(e==="five-perspectives"){I({writeHash:!1});return}if(e==="outputs"){O();return}if(g.some(a=>a.key===e)){A(e,{writeHash:!1});return}let r=e?document.getElementById(e):null,i=r?.closest("[data-category-content]")?r:null;if(i){A(i.closest("[data-category-content]").dataset.categoryContent,{writeHash:!1,section:e});return}p({restore:!1,writeHash:!1}),y()}window.addEventListener("popstate",k),window.addEventListener("hashchange",k),window.addEventListener("scroll",y,{passive:!0}),window.addEventListener("resize",y,{passive:!0}),L(),y(),k()}})();
+</script><script src="assets/scroll-viewer.js" defer></script></body></html>
+
