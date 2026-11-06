@@ -9,6 +9,7 @@ Elessar produces documented statistical assessments and HTML reports. Its scope 
 - [Complete guide as Markdown](https://thibautdqb.github.io/elessar-site/content-english.md): Plain-text version of the English guide.
 - [Full text reference](https://thibautdqb.github.io/elessar-site/llms-full.txt): Complete guide in one text file.
 - [Presentation](https://thibautdqb.github.io/elessar-site/): Interactive visual introduction.
+- [Example report, UCI Wine Chemistry](https://thibautdqb.github.io/elessar-site/assets/reports/elessar-uci-wine-report.pdf): Complete Elessar 1.1.0 report exported as a 55-page PDF.
 
 ## Authoritative project sources
 - [Source and technical documentation](https://github.com/Thibautdqb/elessar)
